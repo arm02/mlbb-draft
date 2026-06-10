@@ -1,4 +1,5 @@
 import { normalizeHeroName } from "@/lib/mlbb-stats";
+import { mlbbPageFetch } from "@/lib/mlbb-http";
 import type { Tier } from "@/lib/types";
 import {
   buildStatisticsUrl,
@@ -17,8 +18,6 @@ export interface RankHeroStats {
 }
 
 export type RankStatsBundle = Record<string, Record<string, RankHeroStats>>;
-
-const USER_AGENT = "Mozilla/5.0 (compatible; mlbb-draft/1.0)";
 
 const RANK_PATTERN =
   /\\"name\\":\\"([^\\]+)\\",\\"tier\\":\\"([^\\]+)\\",\\"points\\":\\"[^\\]+\\",\\"tier_color\\":[^,]+,\\"win_rate\\":\\"([^\\]+)\\",\\"ban_rate\\":\\"([^\\]+)\\",\\"pick_rate\\":\\"([^\\]+)\\"/g;
@@ -71,16 +70,13 @@ export async function fetchRankStats(
   rank: RankFilter
 ): Promise<RankHeroStats[]> {
   const url = buildStatisticsUrl(mode, rank);
-  const res = await fetch(url, {
-    headers: { "User-Agent": USER_AGENT },
-    next: { revalidate: 0 },
-  });
+  const { html, status, error } = await mlbbPageFetch(url);
 
-  if (!res.ok) {
-    throw new Error(`Failed to fetch stats for ${getStatsKey(mode, rank)} (${res.status})`);
+  if (!html) {
+    throw new Error(
+      `Failed to fetch stats for ${getStatsKey(mode, rank)} (${error ?? `HTTP ${status}`})`
+    );
   }
-
-  const html = await res.text();
   const matches = parseMatches(html, mode);
 
   if (!matches.length) {

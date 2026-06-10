@@ -1,7 +1,6 @@
 import type { Hero, HeroRole, Lane, Tier } from "@/lib/types";
-
-const MLBB_API = "https://back.mlbb.gg/api/v1";
-const USER_AGENT = "mlbb-draft/1.0";
+import { mlbbApiFetch, mlbbPageFetch, MLBB_API_BASE } from "@/lib/mlbb-http";
+import { buildStatisticsUrl } from "@/lib/ranks";
 
 const ROLE_MAP: Record<string, HeroRole> = {
   Tank: "Tank",
@@ -16,8 +15,8 @@ const LANE_MAP: Record<string, Lane> = {
   "Exp Lane": "Exp",
   "Gold Lane": "Gold",
   "Mid Lane": "Mid",
-  "Jungle": "Jungle",
-  "Roam": "Roam",
+  Jungle: "Jungle",
+  Roam: "Roam",
 };
 
 export function normalizeHeroName(name: string): string {
@@ -59,24 +58,49 @@ export interface StatsRefreshResult {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function mlbbFetch<T>(path: string, retries = 3): Promise<T | null> {
-  for (let attempt = 0; attempt < retries; attempt++) {
-    try {
-      const res = await fetch(`${MLBB_API}${path}`, {
-        headers: { "User-Agent": USER_AGENT },
-        next: { revalidate: 0 },
-      });
-      if (res.status === 429 || res.status >= 500) {
-        await sleep(400 * (attempt + 1));
-        continue;
-      }
-      if (!res.ok) return null;
-      return (await res.json()) as T;
-    } catch {
-      await sleep(300 * (attempt + 1));
-    }
+async function mlbbFetch<T>(path: string, retries = 5): Promise<T | null> {
+  const { data } = await mlbbApiFetch<T>(`${MLBB_API_BASE}${path}`, retries);
+  return data;
+}
+
+async function fetchHeroListFallback(): Promise<MlbbHeroListItem[]> {
+  const { html, error } = await mlbbPageFetch(buildStatisticsUrl("rank", "Mythic"));
+  if (!html) {
+    throw new Error(`Hero list fallback failed: ${error ?? "empty response"}`);
   }
-  return null;
+
+  const pattern = /hero_id\\":(\d+)[^}]*?name\\":\\"([^\\]+)\\"/g;
+  const heroes: MlbbHeroListItem[] = [];
+
+  for (const match of html.matchAll(pattern)) {
+    heroes.push({ id: Number(match[1]), name: match[2] });
+  }
+
+  if (!heroes.length) {
+    throw new Error("Hero list fallback returned no heroes");
+  }
+
+  return heroes;
+}
+
+async function fetchHeroList(): Promise<MlbbHeroListItem[]> {
+  const { data, status, error } = await mlbbApiFetch<MlbbHeroListItem[]>(
+    `${MLBB_API_BASE}/heroes`
+  );
+
+  if (data?.length) return data;
+
+  try {
+    const fallback = await fetchHeroListFallback();
+    return fallback;
+  } catch (fallbackErr) {
+    const detail = error ?? `HTTP ${status ?? "unknown"}`;
+    const fbMsg =
+      fallbackErr instanceof Error ? fallbackErr.message : "fallback failed";
+    throw new Error(
+      `Failed to fetch hero list from mlbb.gg (${detail}; fallback: ${fbMsg})`
+    );
+  }
 }
 
 function mapTier(tier: string): Tier {
@@ -110,27 +134,16 @@ async function mapPool<T, R>(
 }
 
 export async function refreshHeroStats(localHeroes: Hero[]): Promise<StatsRefreshResult> {
-  const list = await mlbbFetch<MlbbHeroListItem[]>("/heroes");
-  if (!list?.length) {
-    throw new Error("Failed to fetch hero list from mlbb.gg");
-  }
+  const list = await fetchHeroList();
 
   const nameToMlbbId = new Map<string, number>();
-  const mlbbIdToName = new Map<number, string>();
   for (const h of list) {
     nameToMlbbId.set(normalizeHeroName(h.name), h.id);
-    mlbbIdToName.set(h.id, h.name);
   }
 
   const nameToLocalId = new Map<string, string>();
   for (const h of localHeroes) {
     nameToLocalId.set(normalizeHeroName(h.name), h.id);
-  }
-
-  const mlbbIdToLocalId = new Map<number, string>();
-  for (const h of localHeroes) {
-    const mlbbId = nameToMlbbId.get(normalizeHeroName(h.name));
-    if (mlbbId) mlbbIdToLocalId.set(mlbbId, h.id);
   }
 
   let statsUpdated = 0;

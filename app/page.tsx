@@ -27,7 +27,7 @@ export default function HomePage() {
   const statsRank = useDraftStore((s) => s.statsRank);
 
   const { data: heroes = [], isLoading } = useSWR<Hero[]>(
-    "/data/heroes.json",
+    "/api/heroes",
     fetcher,
     { revalidateOnFocus: false, dedupingInterval: 30000 }
   );

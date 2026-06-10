@@ -1,13 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFileSync, readFileSync, existsSync } from "fs";
-import { join } from "path";
 import type { Hero } from "@/lib/types";
 import { refreshHeroStats } from "@/lib/mlbb-stats";
 import { fetchAllRankStats } from "@/lib/mlbb-rank-stats";
+import {
+  isVercelDeploy,
+  readJsonFileAsync,
+  writeJsonFileAsync,
+} from "@/lib/data-store";
 
-const HEROES_JSON = join(process.cwd(), "public", "data", "heroes.json");
-const META_JSON = join(process.cwd(), "public", "data", "meta.json");
-const RANK_STATS_JSON = join(process.cwd(), "public", "data", "rank-stats.json");
+export const maxDuration = 300;
+export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   const secret = req.headers.get("x-cron-secret");
@@ -17,43 +19,47 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const localHeroes: Hero[] = JSON.parse(readFileSync(HEROES_JSON, "utf-8"));
-    const result = await refreshHeroStats(localHeroes);
+    const localHeroes = await readJsonFileAsync<Hero[]>("heroes.json");
     const rankStatsResult = await fetchAllRankStats();
 
-    writeFileSync(HEROES_JSON, JSON.stringify(result.heroes, null, 2));
-    writeFileSync(
-      RANK_STATS_JSON,
-      JSON.stringify(
-        {
-          refreshedAt: rankStatsResult.refreshedAt,
-          source: "mlbb.gg statistics",
-          bundle: rankStatsResult.bundle,
-        },
-        null,
-        2
-      )
-    );
+    await writeJsonFileAsync("rank-stats.json", {
+      refreshedAt: rankStatsResult.refreshedAt,
+      source: "mlbb.gg statistics",
+      bundle: rankStatsResult.bundle,
+    });
 
-    writeFileSync(
-      META_JSON,
-      JSON.stringify(
-        {
-          patch: result.patch,
-          source: "mlbb.gg · all ranks + counters",
-          refreshedAt: new Date().toISOString(),
-          statsUpdated: result.statsUpdated,
-          statsSkipped: result.statsSkipped,
-          countersUpdated: result.countersUpdated,
-          rankStatsRefreshedAt: rankStatsResult.refreshedAt,
-        },
-        null,
-        2
-      )
-    );
+    if (isVercelDeploy()) {
+      await writeJsonFileAsync("meta.json", {
+        source: "mlbb.gg statistics (Vercel cron)",
+        refreshedAt: new Date().toISOString(),
+        rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+      });
+
+      return NextResponse.json({
+        success: true,
+        mode: "vercel-fast",
+        count: localHeroes.length,
+        rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+        updatedAt: new Date().toISOString(),
+      });
+    }
+
+    const result = await refreshHeroStats(localHeroes);
+
+    await writeJsonFileAsync("heroes.json", result.heroes);
+    await writeJsonFileAsync("meta.json", {
+      patch: result.patch,
+      source: "mlbb.gg · all ranks + counters",
+      refreshedAt: new Date().toISOString(),
+      statsUpdated: result.statsUpdated,
+      statsSkipped: result.statsSkipped,
+      countersUpdated: result.countersUpdated,
+      rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+    });
 
     return NextResponse.json({
       success: true,
+      mode: "full",
       count: result.heroes.length,
       patch: result.patch,
       statsUpdated: result.statsUpdated,

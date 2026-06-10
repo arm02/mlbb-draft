@@ -1,18 +1,15 @@
 import { NextResponse } from "next/server";
-import { readFileSync } from "fs";
-import { join } from "path";
+import { readJsonFileAsync } from "@/lib/data-store";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
-export function GET() {
+export async function GET() {
   try {
-    const filePath = join(process.cwd(), "public", "data", "heroes.json");
-    const raw = readFileSync(filePath, "utf-8");
-    const data = JSON.parse(raw);
+    const data = await readJsonFileAsync("heroes.json");
 
     return NextResponse.json(data, {
       headers: {
-        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=3600",
       },
     });
   } catch {

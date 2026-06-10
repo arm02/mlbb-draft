@@ -29,7 +29,7 @@ export function Header() {
   const [showPasswordModal, setShowPasswordModal] = useState(false);
   const [password, setPassword] = useState("");
 
-  const { data: heroes = [] } = useSWR<Hero[]>("/data/heroes.json", fetcher, {
+  const { data: heroes = [] } = useSWR<Hero[]>("/api/heroes", fetcher, {
     revalidateOnFocus: false,
     dedupingInterval: 30000,
   });
@@ -56,9 +56,11 @@ export function Header() {
     try {
       const result = await trigger(password);
       closePasswordModal();
-      showToast(
-        `✓ Stats ${result.statsUpdated}/${result.total} · ranks updated · images ${result.imagesUpdated}`
-      );
+      const msg =
+        result.mode === "vercel-fast"
+          ? `✓ Rank stats updated (${result.rankStatsRefreshedAt?.slice(0, 10) ?? "ok"})`
+          : `✓ Stats ${result.statsUpdated}/${result.total} · ranks · images ${result.imagesUpdated}`;
+      showToast(msg);
       setTimeout(() => window.location.reload(), 1200);
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Refresh failed";
