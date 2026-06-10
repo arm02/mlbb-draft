@@ -3,7 +3,7 @@
 import { useMemo, useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import {
-  RotateCcw, Undo2, Clock, Sword, ShieldOff, Users,
+  RotateCcw, Undo2, Clock, Sword, ShieldOff, Users, SkipForward,
 } from "lucide-react";
 import { useDraftStore } from "@/store/useDraftStore";
 import { HeroSearch } from "@/components/ui/HeroSearch";
@@ -11,7 +11,7 @@ import { TierBadge } from "@/components/ui/TierBadge";
 import { RoleBadge } from "@/components/ui/RoleBadge";
 import { filterHeroes, getHeroById } from "@/lib/heroes";
 import {
-  DRAFT_ORDER, TOTAL_STEPS,
+  DRAFT_ORDER, TOTAL_STEPS, isBanStep,
   getTeamBans, getTeamPicks,
   getUsedHeroIds, getPhaseName,
   type DraftSlot,
@@ -32,9 +32,11 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
   const simSlots   = useDraftStore((s) => s.simSlots);
   const simStep    = useDraftStore((s) => s.simStep);
   const simPickHero  = useDraftStore((s) => s.simPickHero);
-  const simClearSlot = useDraftStore((s) => s.simClearSlot);
-  const simUndo      = useDraftStore((s) => s.simUndo);
-  const simReset     = useDraftStore((s) => s.simReset);
+  const simClearSlot  = useDraftStore((s) => s.simClearSlot);
+  const simSkipBan    = useDraftStore((s) => s.simSkipBan);
+  const simSkipToPicks = useDraftStore((s) => s.simSkipToPicks);
+  const simUndo       = useDraftStore((s) => s.simUndo);
+  const simReset      = useDraftStore((s) => s.simReset);
 
   const [query, setQuery]           = useState("");
   const [myTeam, setMyTeam]         = useState<"blue" | "red">("blue");
@@ -55,8 +57,8 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
   const enemyPicks = enemyTeam === "red" ? redPicks : bluePicks;
 
   const filtered = useMemo(
-    () => filterHeroes(heroes, query).filter((h) => !usedIds.has(h.id)),
-    [heroes, query, usedIds]
+    () => filterHeroes(heroes, query),
+    [heroes, query]
   );
 
   // Timer
@@ -79,6 +81,18 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
     simClearSlot(stepIndex);
     resetTimer();
   }, [simClearSlot, resetTimer]);
+
+  const handleSkipBan = useCallback(() => {
+    simSkipBan();
+    resetTimer();
+  }, [simSkipBan, resetTimer]);
+
+  const handleSkipToPicks = useCallback(() => {
+    simSkipToPicks();
+    resetTimer();
+  }, [simSkipToPicks, resetTimer]);
+
+  const inBanPhase = isBanStep(simStep);
 
   const teamColor = currentAction?.team === "blue" ? "#4F8EF7" : "#F87171";
   const actionLabel = currentAction?.type === "ban" ? "BAN" : "PICK";
@@ -122,7 +136,29 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
         </div>
 
         {/* Row 2 (or right side on sm+): controls */}
-        <div className="flex items-center gap-1.5 flex-shrink-0">
+        <div className="flex items-center gap-1.5 flex-shrink-0 flex-wrap justify-end">
+          {inBanPhase && (
+            <>
+              <button
+                type="button"
+                onClick={handleSkipBan}
+                className="flex items-center gap-1 px-2 py-1 rounded text-xs text-text-muted border border-border hover:text-text-primary hover:bg-surface transition-colors"
+                title="Skip this ban slot"
+              >
+                <SkipForward size={11} />
+                <span className="hidden sm:inline">Skip</span>
+              </button>
+              <button
+                type="button"
+                onClick={handleSkipToPicks}
+                className="flex items-center gap-1 px-2 py-1 rounded text-xs text-success border border-success/30 bg-success/5 hover:bg-success/15 transition-colors"
+                title="Skip all bans and go to picks"
+              >
+                <Sword size={11} />
+                <span className="hidden sm:inline">To Picks</span>
+              </button>
+            </>
+          )}
           <button onClick={() => setTimerActive((v) => !v)}
             className={cn("flex items-center gap-1 px-2 py-1 rounded text-xs transition-colors",
               timerActive ? "text-warning bg-warning/10 border border-warning/30" : "text-text-muted border border-border hover:text-text-primary")}>
@@ -159,6 +195,7 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
                 {filtered.map((hero) => (
                   <MiniHeroCard key={hero.id} hero={hero}
                     isBan={currentAction?.type === "ban"}
+                    isUsed={usedIds.has(hero.id)}
                     onClick={() => handleSelect(hero)} />
                 ))}
                 {filtered.length === 0 && (
@@ -186,6 +223,7 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
                 {filtered.map((hero) => (
                   <MiniHeroCard key={hero.id} hero={hero}
                     isBan={currentAction?.type === "ban"}
+                    isUsed={usedIds.has(hero.id)}
                     onClick={() => handleSelect(hero)} />
                 ))}
                 {filtered.length === 0 && (
@@ -469,25 +507,59 @@ function PickSlot({ hero, index, isActive, accent, compact = false, onClear }: {
 }
 
 // ─── Mini Hero Card ──────────────────────────────────────────────
-function MiniHeroCard({ hero, isBan, onClick }: { hero: Hero; isBan: boolean; onClick: () => void }) {
+function MiniHeroCard({
+  hero,
+  isBan,
+  isUsed,
+  onClick,
+}: {
+  hero: Hero;
+  isBan: boolean;
+  isUsed: boolean;
+  onClick: () => void;
+}) {
   return (
-    <button type="button" onClick={onClick}
-      className={cn("group relative flex flex-col items-center gap-0.5 rounded-lg border p-1.5 w-full transition-all",
-        "border-border bg-surface",
-        isBan
-          ? "hover:border-danger/70 hover:bg-danger/10 hover:shadow-[0_0_8px_rgba(248,113,113,0.3)]"
-          : "hover:border-primary/70 hover:bg-primary/10 hover:shadow-[0_0_8px_rgba(79,142,247,0.3)]")}>
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={isUsed}
+      title={isUsed ? `${hero.name} — already banned/picked` : hero.name}
+      className={cn(
+        "group relative flex flex-col items-center gap-0.5 rounded-lg border p-1.5 w-full transition-all",
+        isUsed
+          ? "border-border/50 bg-background/40 opacity-50 cursor-not-allowed"
+          : cn(
+              "border-border bg-surface",
+              isBan
+                ? "hover:border-danger/70 hover:bg-danger/10 hover:shadow-[0_0_8px_rgba(248,113,113,0.3)]"
+                : "hover:border-primary/70 hover:bg-primary/10 hover:shadow-[0_0_8px_rgba(79,142,247,0.3)]"
+            )
+      )}
+    >
       <div className="relative w-9 h-9 rounded overflow-hidden">
-        <Image src={hero.image} alt={hero.name} fill sizes="64px" className="object-cover"
-          onError={(e) => { (e.target as HTMLImageElement).src = "/heroes/placeholder.webp"; }} />
+        <Image
+          src={hero.image}
+          alt={hero.name}
+          fill
+          sizes="64px"
+          className={cn("object-cover", isUsed && "grayscale")}
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "/heroes/placeholder.webp";
+          }}
+        />
         <div className="absolute top-0 right-0">
           <TierBadge tier={hero.tier} className="w-3.5 h-3.5 text-[7px]" />
         </div>
+        {isUsed && (
+          <div className="absolute inset-0 flex items-center justify-center bg-danger/35">
+            <span className="text-danger text-xs font-bold">✕</span>
+          </div>
+        )}
       </div>
       <span className="text-[8px] font-display font-semibold text-center leading-tight truncate w-full">
         {hero.name}
       </span>
-      {isBan && (
+      {isBan && !isUsed && (
         <div className="absolute inset-0 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 bg-danger/20">
           <span className="text-danger text-[10px] font-bold">BAN</span>
         </div>

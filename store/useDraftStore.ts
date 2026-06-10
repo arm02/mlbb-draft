@@ -1,6 +1,12 @@
 import { create } from "zustand";
 import type { TabId } from "@/lib/types";
-import { buildEmptySlots, type DraftSlot } from "@/lib/draft";
+import {
+  buildEmptySlots,
+  FIRST_PICK_STEP_INDEX,
+  TOTAL_STEPS,
+  isBanStep,
+  type DraftSlot,
+} from "@/lib/draft";
 import { DEFAULT_MODE, DEFAULT_RANK, type RankFilter, type StatsMode } from "@/lib/ranks";
 
 interface DraftStore {
@@ -36,6 +42,8 @@ interface DraftStore {
   simStep: number;
   simPickHero: (heroId: string) => void;
   simClearSlot: (stepIndex: number) => void;
+  simSkipBan: () => void;
+  simSkipToPicks: () => void;
   simUndo: () => void;
   simReset: () => void;
 
@@ -87,11 +95,21 @@ export const useDraftStore = create<DraftStore>((set) => ({
   simStep: 0,
   simPickHero: (heroId) =>
     set((state) => {
-      if (state.simStep >= 20) return state;
+      if (state.simStep >= TOTAL_STEPS) return state;
       const slots = state.simSlots.map((s, i) =>
         i === state.simStep ? { ...s, heroId } : s
       );
       return { simSlots: slots, simStep: state.simStep + 1 };
+    }),
+  simSkipBan: () =>
+    set((state) => {
+      if (!isBanStep(state.simStep) || state.simStep >= TOTAL_STEPS) return state;
+      return { simStep: state.simStep + 1 };
+    }),
+  simSkipToPicks: () =>
+    set((state) => {
+      if (state.simStep >= FIRST_PICK_STEP_INDEX) return state;
+      return { simStep: FIRST_PICK_STEP_INDEX };
     }),
   simClearSlot: (stepIndex) =>
     set((state) => {

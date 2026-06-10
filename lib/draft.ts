@@ -43,6 +43,12 @@ export const DRAFT_ORDER: DraftAction[] = [
 
 export const TOTAL_STEPS = DRAFT_ORDER.length; // 20
 
+export const FIRST_PICK_STEP_INDEX = DRAFT_ORDER.findIndex((a) => a.type === "pick");
+
+export function isBanStep(step: number): boolean {
+  return step >= 0 && step < FIRST_PICK_STEP_INDEX;
+}
+
 export interface DraftSlot {
   step: number;
   action: DraftAction;
@@ -68,10 +74,10 @@ export function getUsedHeroIds(slots: DraftSlot[]): Set<string> {
 }
 
 export function getPhaseName(step: number): string {
-  if (step < 3)  return "Ban Phase 1 — Blue";
-  if (step < 6)  return "Ban Phase 1 — Red";
-  if (step < 8)  return "Ban Phase 2 — Blue";
-  if (step < 10) return "Ban Phase 2 — Red";
+  if (step < 3)  return "Ban Phase 1 — Blue (optional)";
+  if (step < 6)  return "Ban Phase 1 — Red (optional)";
+  if (step < 8)  return "Ban Phase 2 — Blue (optional)";
+  if (step < 10) return "Ban Phase 2 — Red (optional)";
   if (step < 20) return "Pick Phase";
   return "Draft Complete";
 }
