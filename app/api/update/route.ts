@@ -20,7 +20,18 @@ export async function POST(req: NextRequest) {
 
   try {
     const localHeroes = await readJsonFileAsync<Hero[]>("heroes.json");
-    const rankStatsResult = await fetchAllRankStats();
+
+    let existingBundle: Awaited<ReturnType<typeof fetchAllRankStats>>["bundle"] | undefined;
+    try {
+      const existing = await readJsonFileAsync<{ bundle?: typeof existingBundle }>(
+        "rank-stats.json"
+      );
+      existingBundle = existing.bundle;
+    } catch {
+      /* no cached rank stats yet */
+    }
+
+    const rankStatsResult = await fetchAllRankStats(existingBundle);
 
     await writeJsonFileAsync("rank-stats.json", {
       refreshedAt: rankStatsResult.refreshedAt,
@@ -30,9 +41,14 @@ export async function POST(req: NextRequest) {
 
     if (isVercelDeploy()) {
       await writeJsonFileAsync("meta.json", {
-        source: "mlbb.gg statistics (Vercel cron)",
+        source:
+          rankStatsResult.updated.length === 0
+            ? "cached rank stats (Vercel cron)"
+            : "mlbb.gg statistics (Vercel cron)",
         refreshedAt: new Date().toISOString(),
         rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+        rankStatsUpdated: rankStatsResult.updated,
+        rankStatsCached: rankStatsResult.cached,
       });
 
       return NextResponse.json({
@@ -40,6 +56,8 @@ export async function POST(req: NextRequest) {
         mode: "vercel-fast",
         count: localHeroes.length,
         rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+        rankStatsUpdated: rankStatsResult.updated,
+        rankStatsCached: rankStatsResult.cached,
         updatedAt: new Date().toISOString(),
       });
     }

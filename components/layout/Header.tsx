@@ -61,10 +61,16 @@ export function Header() {
     try {
       const result = await trigger(password);
       closePasswordModal();
-      const msg =
-        result.mode === "vercel-fast"
-          ? `✓ Rank stats updated (${result.rankStatsRefreshedAt?.slice(0, 10) ?? "ok"})`
-          : `✓ Stats ${result.statsUpdated}/${result.total} · ranks · images ${result.imagesUpdated}`;
+      let msg: string;
+      if (result.mode === "vercel-fast") {
+        const n = result.rankStatsUpdated?.length ?? 0;
+        msg =
+          n > 0
+            ? `✓ ${n} rank(s) updated`
+            : "✓ Cached rank stats kept (mlbb.gg blocked on Vercel)";
+      } else {
+        msg = `✓ Stats ${result.statsUpdated}/${result.total} · ranks · images ${result.imagesUpdated}`;
+      }
       showToast(msg);
       setTimeout(() => window.location.reload(), 1200);
     } catch (err) {

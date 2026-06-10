@@ -86,8 +86,17 @@ export async function POST(req: NextRequest) {
   try {
     const localHeroes = await readJsonFileAsync<Hero[]>("heroes.json");
 
-    // 1. Rank stats — always refresh (scrapes mlbb.gg, works on Vercel)
-    const rankStatsResult = await fetchAllRankStats();
+    let existingBundle: Awaited<ReturnType<typeof fetchAllRankStats>>["bundle"] | undefined;
+    try {
+      const existing = await readJsonFileAsync<{ bundle?: typeof existingBundle }>(
+        "rank-stats.json"
+      );
+      existingBundle = existing.bundle;
+    } catch {
+      /* no cached rank stats yet */
+    }
+
+    const rankStatsResult = await fetchAllRankStats(existingBundle);
     await writeJsonFileAsync("rank-stats.json", {
       refreshedAt: rankStatsResult.refreshedAt,
       source: "mlbb.gg statistics",
@@ -95,11 +104,16 @@ export async function POST(req: NextRequest) {
     });
 
     if (onVercel) {
+      const usedCacheOnly = rankStatsResult.updated.length === 0;
       const meta = {
         patch: new Date().toISOString().slice(0, 10) + " · all ranks",
-        source: "mlbb.gg statistics (Vercel fast refresh)",
+        source: usedCacheOnly
+          ? "cached rank stats (mlbb.gg blocked on Vercel)"
+          : "mlbb.gg statistics (Vercel fast refresh)",
         refreshedAt: new Date().toISOString(),
         rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+        rankStatsUpdated: rankStatsResult.updated,
+        rankStatsCached: rankStatsResult.cached,
       };
       await writeJsonFileAsync("meta.json", meta);
 
@@ -108,9 +122,12 @@ export async function POST(req: NextRequest) {
         mode: "vercel-fast",
         total: localHeroes.length,
         rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+        rankStatsUpdated: rankStatsResult.updated,
+        rankStatsCached: rankStatsResult.cached,
         refreshedAt: new Date().toISOString(),
-        message:
-          "Rank stats updated. Full counter/image refresh requires Docker deploy or local refresh + push.",
+        message: usedCacheOnly
+          ? "mlbb.gg blocked from Vercel — kept cached rank stats. For latest data: refresh locally then push."
+          : `Rank stats updated (${rankStatsResult.updated.length} ranks). Counters/images need local refresh.`,
       });
     }
 

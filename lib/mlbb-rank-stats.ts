@@ -19,6 +19,13 @@ export interface RankHeroStats {
 
 export type RankStatsBundle = Record<string, Record<string, RankHeroStats>>;
 
+export interface RankStatsRefreshResult {
+  bundle: RankStatsBundle;
+  refreshedAt: string;
+  updated: string[];
+  cached: string[];
+}
+
 const RANK_PATTERN =
   /\\"name\\":\\"([^\\]+)\\",\\"tier\\":\\"([^\\]+)\\",\\"points\\":\\"[^\\]+\\",\\"tier_color\\":[^,]+,\\"win_rate\\":\\"([^\\]+)\\",\\"ban_rate\\":\\"([^\\]+)\\",\\"pick_rate\\":\\"([^\\]+)\\"/g;
 
@@ -65,6 +72,10 @@ function parseMatches(
   return matches;
 }
 
+function toStatsMap(stats: RankHeroStats[]): Record<string, RankHeroStats> {
+  return Object.fromEntries(stats.map((s) => [normalizeHeroName(s.name), s]));
+}
+
 export async function fetchRankStats(
   mode: StatsMode,
   rank: RankFilter
@@ -92,28 +103,45 @@ export async function fetchRankStats(
   }));
 }
 
-export async function fetchAllRankStats(): Promise<{
-  bundle: RankStatsBundle;
-  refreshedAt: string;
-}> {
-  const bundle: RankStatsBundle = {};
+export async function fetchAllRankStats(
+  existingBundle?: RankStatsBundle | null
+): Promise<RankStatsRefreshResult> {
+  const bundle: RankStatsBundle = existingBundle ? { ...existingBundle } : {};
+  const updated: string[] = [];
+  const cached: string[] = [];
   const refreshedAt = new Date().toISOString();
 
   for (const rank of RANK_OPTIONS) {
     const key = getStatsKey("rank", rank);
-    const stats = await fetchRankStats("rank", rank);
-    bundle[key] = Object.fromEntries(
-      stats.map((s) => [normalizeHeroName(s.name), s])
-    );
+    try {
+      const stats = await fetchRankStats("rank", rank);
+      bundle[key] = toStatsMap(stats);
+      updated.push(key);
+    } catch {
+      if (bundle[key]) {
+        cached.push(key);
+      }
+    }
     await sleep(200);
   }
 
-  const proStats = await fetchRankStats("pro", "pro");
-  bundle.pro = Object.fromEntries(
-    proStats.map((s) => [normalizeHeroName(s.name), s])
-  );
+  try {
+    const proStats = await fetchRankStats("pro", "pro");
+    bundle.pro = toStatsMap(proStats);
+    updated.push("pro");
+  } catch {
+    if (bundle.pro) {
+      cached.push("pro");
+    }
+  }
 
-  return { bundle, refreshedAt };
+  if (!updated.length && !Object.keys(bundle).length) {
+    throw new Error(
+      "Failed to fetch rank stats from mlbb.gg and no cached data available"
+    );
+  }
+
+  return { bundle, refreshedAt, updated, cached };
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
