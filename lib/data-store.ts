@@ -3,9 +3,16 @@ import { join, dirname } from "path";
 import { headers } from "next/headers";
 
 const DATA_DIR = join(process.cwd(), "public", "data");
+const BLOB_ACCESS = (process.env.BLOB_ACCESS === "public" ? "public" : "private") as
+  | "public"
+  | "private";
+
+function blobToken(): string | undefined {
+  return process.env.BLOB_READ_WRITE_TOKEN;
+}
 
 function useBlob(): boolean {
-  return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+  return Boolean(blobToken());
 }
 
 function localPath(filename: string): string {
@@ -50,6 +57,24 @@ async function readStaticJsonFile<T>(filename: string): Promise<T> {
   return (await res.json()) as T;
 }
 
+async function readBlobJsonFile<T>(filename: string): Promise<T> {
+  const { get } = await import("@vercel/blob");
+  const pathname = `data/${filename}`;
+
+  const result = await get(pathname, {
+    access: BLOB_ACCESS,
+    token: blobToken(),
+    useCache: false,
+  });
+
+  if (!result || result.statusCode !== 200 || !result.stream) {
+    throw new Error(`Blob not found: ${pathname}`);
+  }
+
+  const text = await new Response(result.stream).text();
+  return JSON.parse(text) as T;
+}
+
 export function readJsonFile<T>(filename: string): T {
   return readLocalJsonFile<T>(filename);
 }
@@ -57,15 +82,9 @@ export function readJsonFile<T>(filename: string): T {
 export async function readJsonFileAsync<T>(filename: string): Promise<T> {
   if (useBlob()) {
     try {
-      const { head } = await import("@vercel/blob");
-      const meta = await head(`data/${filename}`, {
-        token: process.env.BLOB_READ_WRITE_TOKEN,
-      });
-      const res = await fetch(meta.url, { cache: "no-store" });
-      if (!res.ok) throw new Error(`Failed to read blob: ${filename}`);
-      return (await res.json()) as T;
+      return await readBlobJsonFile<T>(filename);
     } catch {
-      /* fall through */
+      /* fall through to bundled static data */
     }
   }
 
@@ -90,8 +109,8 @@ export async function writeJsonFileAsync(filename: string, data: unknown): Promi
   if (useBlob()) {
     const { put } = await import("@vercel/blob");
     await put(`data/${filename}`, content, {
-      access: "public",
-      token: process.env.BLOB_READ_WRITE_TOKEN,
+      access: BLOB_ACCESS,
+      token: blobToken(),
       allowOverwrite: true,
       contentType: "application/json",
     });
