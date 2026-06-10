@@ -29,6 +29,7 @@ interface DraftStore {
   simSlots: DraftSlot[];
   simStep: number;
   simPickHero: (heroId: string) => void;
+  simClearSlot: (stepIndex: number) => void;
   simUndo: () => void;
   simReset: () => void;
 
@@ -80,6 +81,15 @@ export const useDraftStore = create<DraftStore>((set) => ({
         i === state.simStep ? { ...s, heroId } : s
       );
       return { simSlots: slots, simStep: state.simStep + 1 };
+    }),
+  simClearSlot: (stepIndex) =>
+    set((state) => {
+      const slot = state.simSlots[stepIndex];
+      if (!slot?.heroId) return state;
+      const slots = state.simSlots.map((s, i) =>
+        i >= stepIndex ? { ...s, heroId: null } : s
+      );
+      return { simSlots: slots, simStep: stepIndex };
     }),
   simUndo: () =>
     set((state) => {

@@ -31,9 +31,10 @@ interface DraftSimTabProps { heroes: Hero[] }
 export function DraftSimTab({ heroes }: DraftSimTabProps) {
   const simSlots   = useDraftStore((s) => s.simSlots);
   const simStep    = useDraftStore((s) => s.simStep);
-  const simPickHero = useDraftStore((s) => s.simPickHero);
-  const simUndo    = useDraftStore((s) => s.simUndo);
-  const simReset   = useDraftStore((s) => s.simReset);
+  const simPickHero  = useDraftStore((s) => s.simPickHero);
+  const simClearSlot = useDraftStore((s) => s.simClearSlot);
+  const simUndo      = useDraftStore((s) => s.simUndo);
+  const simReset     = useDraftStore((s) => s.simReset);
 
   const [query, setQuery]           = useState("");
   const [myTeam, setMyTeam]         = useState<"blue" | "red">("blue");
@@ -73,6 +74,11 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
     setQuery("");
     resetTimer();
   }, [isComplete, usedIds, simPickHero, resetTimer]);
+
+  const handleClearSlot = useCallback((stepIndex: number) => {
+    simClearSlot(stepIndex);
+    resetTimer();
+  }, [simClearSlot, resetTimer]);
 
   const teamColor = currentAction?.team === "blue" ? "#4F8EF7" : "#F87171";
   const actionLabel = currentAction?.type === "ban" ? "BAN" : "PICK";
@@ -142,7 +148,7 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
       {/* ── Desktop: 3-column grid ──────────────────────────────── */}
       <div className="hidden md:grid md:grid-cols-[180px_1fr_180px] lg:grid-cols-[200px_1fr_200px] gap-3">
         <DesktopTeamPanel team="blue" bans={blueBans} picks={bluePicks} heroes={heroes}
-          currentStep={simStep} myTeam={myTeam} />
+          currentStep={simStep} myTeam={myTeam} onClearSlot={handleClearSlot} />
 
         {/* Center */}
         <div className="space-y-2">
@@ -166,7 +172,7 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
         </div>
 
         <DesktopTeamPanel team="red" bans={redBans} picks={redPicks} heroes={heroes}
-          currentStep={simStep} myTeam={myTeam} />
+          currentStep={simStep} myTeam={myTeam} onClearSlot={handleClearSlot} />
       </div>
 
       {/* ── Mobile: hero grid first, then team panels side by side ─ */}
@@ -195,9 +201,9 @@ export function DraftSimTab({ heroes }: DraftSimTabProps) {
         {/* Blue + Red side by side */}
         <div className="grid grid-cols-2 gap-2">
           <MobileTeamPanel team="blue" bans={blueBans} picks={bluePicks} heroes={heroes}
-            currentStep={simStep} myTeam={myTeam} />
+            currentStep={simStep} myTeam={myTeam} onClearSlot={handleClearSlot} />
           <MobileTeamPanel team="red" bans={redBans} picks={redPicks} heroes={heroes}
-            currentStep={simStep} myTeam={myTeam} />
+            currentStep={simStep} myTeam={myTeam} onClearSlot={handleClearSlot} />
         </div>
       </div>
 
@@ -252,17 +258,19 @@ interface TeamPanelProps {
   heroes: Hero[];
   currentStep: number;
   myTeam: "blue" | "red";
+  onClearSlot: (stepIndex: number) => void;
   compact?: boolean;
 }
 
 // Shared inner content used by both desktop panel and mobile compact panel
 function TeamPanelContent({
-  team, bans, picks, heroes, currentStep, isMe, isMyTurn, currentAction, accent, compact,
+  team, bans, picks, heroes, currentStep, isMe, isMyTurn, currentAction, accent, compact, onClearSlot,
 }: {
   team: "blue" | "red"; bans: DraftSlot[]; picks: DraftSlot[]; heroes: Hero[];
   currentStep: number; isMe: boolean; isMyTurn: boolean;
   currentAction: { type: "ban" | "pick"; team: "blue" | "red" } | null;
   accent: string; compact: boolean;
+  onClearSlot: (stepIndex: number) => void;
 }) {
   return (
     <>
@@ -290,7 +298,15 @@ function TeamPanelContent({
             const slot = bans[i];
             const hero = slot?.heroId ? getHeroById(heroes, slot.heroId) : null;
             const isActive = currentStep < TOTAL_STEPS && slot?.step === currentStep;
-            return <BanSlot key={i} hero={hero ?? null} isActive={isActive} accent={accent} />;
+            return (
+              <BanSlot
+                key={i}
+                hero={hero ?? null}
+                isActive={isActive}
+                accent={accent}
+                onClear={slot?.heroId ? () => onClearSlot(slot.step) : undefined}
+              />
+            );
           })}
         </div>
       </div>
@@ -305,7 +321,17 @@ function TeamPanelContent({
             const slot = picks[i];
             const hero = slot?.heroId ? getHeroById(heroes, slot.heroId) : null;
             const isActive = currentStep < TOTAL_STEPS && slot?.step === currentStep;
-            return <PickSlot key={i} hero={hero ?? null} index={i + 1} isActive={isActive} accent={accent} compact={compact} />;
+            return (
+              <PickSlot
+                key={i}
+                hero={hero ?? null}
+                index={i + 1}
+                isActive={isActive}
+                accent={accent}
+                compact={compact}
+                onClear={slot?.heroId ? () => onClearSlot(slot.step) : undefined}
+              />
+            );
           })}
         </div>
       </div>
@@ -314,7 +340,7 @@ function TeamPanelContent({
 }
 
 // Mobile compact wrapper — always visible on mobile, hidden on md+
-function MobileTeamPanel({ team, bans, picks, heroes, currentStep, myTeam }: Omit<TeamPanelProps, "compact">) {
+function MobileTeamPanel({ team, bans, picks, heroes, currentStep, myTeam, onClearSlot }: Omit<TeamPanelProps, "compact">) {
   const accent = team === "blue" ? "#4F8EF7" : "#F87171";
   const isMe   = team === myTeam;
   const currentAction = currentStep < TOTAL_STEPS ? DRAFT_ORDER[currentStep] : null;
@@ -326,13 +352,14 @@ function MobileTeamPanel({ team, bans, picks, heroes, currentStep, myTeam }: Omi
         team={team} bans={bans} picks={picks} heroes={heroes}
         currentStep={currentStep} isMe={isMe} isMyTurn={isMyTurn}
         currentAction={currentAction} accent={accent} compact
+        onClearSlot={onClearSlot}
       />
     </div>
   );
 }
 
 // Desktop panel — always hidden below md, visible md+
-function DesktopTeamPanel({ team, bans, picks, heroes, currentStep, myTeam }: Omit<TeamPanelProps, "compact">) {
+function DesktopTeamPanel({ team, bans, picks, heroes, currentStep, myTeam, onClearSlot }: Omit<TeamPanelProps, "compact">) {
   const accent = team === "blue" ? "#4F8EF7" : "#F87171";
   const isMe   = team === myTeam;
   const currentAction = currentStep < TOTAL_STEPS ? DRAFT_ORDER[currentStep] : null;
@@ -344,20 +371,34 @@ function DesktopTeamPanel({ team, bans, picks, heroes, currentStep, myTeam }: Om
         team={team} bans={bans} picks={picks} heroes={heroes}
         currentStep={currentStep} isMe={isMe} isMyTurn={isMyTurn}
         currentAction={currentAction} accent={accent} compact={false}
+        onClearSlot={onClearSlot}
       />
     </div>
   );
 }
 
-function BanSlot({ hero, isActive, accent }: { hero: Hero | null; isActive: boolean; accent: string }) {
+function BanSlot({ hero, isActive, accent, onClear }: {
+  hero: Hero | null; isActive: boolean; accent: string; onClear?: () => void;
+}) {
+  const Wrapper = onClear ? "button" : "div";
   return (
-    <div className={cn("relative flex-1 aspect-square rounded border overflow-hidden")}
+    <Wrapper
+      type={onClear ? "button" : undefined}
+      onClick={onClear}
+      title={onClear ? `Remove ban: ${hero?.name}` : undefined}
+      className={cn(
+        "relative flex-1 aspect-square rounded border overflow-hidden",
+        onClear && "cursor-pointer group/ban hover:border-danger/70 transition-colors"
+      )}
       style={isActive ? { borderColor: accent, boxShadow: `0 0 8px ${accent}60` } : { borderColor: "#252A35" }}>
       {hero ? (
         <>
           <Image src={hero.image} alt={hero.name} fill sizes="64px" className="object-cover grayscale opacity-50"
             onError={(e) => { (e.target as HTMLImageElement).src = "/heroes/placeholder.webp"; }} />
-          <div className="absolute inset-0 bg-danger/40 flex items-center justify-center">
+          <div className={cn(
+            "absolute inset-0 flex items-center justify-center transition-colors",
+            onClear ? "bg-danger/40 group-hover/ban:bg-danger/60" : "bg-danger/40"
+          )}>
             <span className="text-danger text-base font-bold leading-none">✕</span>
           </div>
           <div className="absolute bottom-0 left-0 right-0 bg-black/60 px-0.5">
@@ -372,17 +413,25 @@ function BanSlot({ hero, isActive, accent }: { hero: Hero | null; isActive: bool
       ) : (
         <div className="absolute inset-0 border border-dashed border-border/30 rounded" />
       )}
-    </div>
+    </Wrapper>
   );
 }
 
-function PickSlot({ hero, index, isActive, accent, compact = false }: {
-  hero: Hero | null; index: number; isActive: boolean; accent: string; compact?: boolean;
+function PickSlot({ hero, index, isActive, accent, compact = false, onClear }: {
+  hero: Hero | null; index: number; isActive: boolean; accent: string; compact?: boolean; onClear?: () => void;
 }) {
+  const Wrapper = onClear ? "button" : "div";
   return (
-    <div className={cn("flex items-center gap-1 rounded-lg border p-1 transition-all",
-      compact ? "min-h-[30px]" : "min-h-[38px]",
-      hero ? "bg-surface/80" : "bg-background/30")}
+    <Wrapper
+      type={onClear ? "button" : undefined}
+      onClick={onClear}
+      title={onClear ? `Remove pick: ${hero?.name}` : undefined}
+      className={cn(
+        "flex items-center gap-1 rounded-lg border p-1 transition-all w-full text-left",
+        compact ? "min-h-[30px]" : "min-h-[38px]",
+        hero ? "bg-surface/80" : "bg-background/30",
+        onClear && "cursor-pointer hover:border-danger/50 hover:bg-danger/5"
+      )}
       style={isActive ? { borderColor: accent, boxShadow: `0 0 8px ${accent}40` } : { borderColor: hero ? `${accent}30` : "#252A35" }}>
       {hero ? (
         <>
@@ -401,6 +450,9 @@ function PickSlot({ hero, index, isActive, accent, compact = false }: {
               </div>
             )}
           </div>
+          {onClear && (
+            <span className="text-danger text-[10px] font-bold flex-shrink-0 opacity-60 hover:opacity-100">✕</span>
+          )}
         </>
       ) : (
         <div className="flex items-center gap-1 px-0.5">
@@ -412,7 +464,7 @@ function PickSlot({ hero, index, isActive, accent, compact = false }: {
           {!compact && <span className="text-[10px] text-text-muted italic">{isActive ? "Picking…" : "—"}</span>}
         </div>
       )}
-    </div>
+    </Wrapper>
   );
 }
 
