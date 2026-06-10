@@ -3,6 +3,9 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import { getBanCandidates } from "@/lib/winrate";
+import { getPatchLabel } from "@/lib/patch";
+import { useDraftStore } from "@/store/useDraftStore";
+import { getStatsLabel } from "@/lib/ranks";
 import { TierBadge } from "@/components/ui/TierBadge";
 import { RoleBadge } from "@/components/ui/RoleBadge";
 import type { Hero, HeroRole } from "@/lib/types";
@@ -26,8 +29,12 @@ const FILTER_OPTIONS: { id: BanFilter; label: string }[] = [
 
 export function BanTab({ heroes }: BanTabProps) {
   const [filter, setFilter] = useState<BanFilter>("all");
+  const statsMode = useDraftStore((s) => s.statsMode);
+  const statsRank = useDraftStore((s) => s.statsRank);
 
-  const banCandidates = useMemo(() => getBanCandidates(heroes, 20), [heroes]);
+  const banCandidates = useMemo(() => getBanCandidates(heroes), [heroes]);
+  const patchLabel = useMemo(() => getPatchLabel(heroes), [heroes]);
+  const rankLabel = getStatsLabel(statsMode, statsRank);
 
   const filtered = useMemo(() => {
     if (filter === "all") return banCandidates;
@@ -42,11 +49,11 @@ export function BanTab({ heroes }: BanTabProps) {
         <div>
           <h2 className="text-base font-bold font-display">Ban Recommender</h2>
           <p className="text-xs text-text-muted mt-0.5">
-            Sorted by ban priority score — ban rate × 0.6 + win rate × 0.4
+            {rankLabel} · {heroes.length} heroes · ban rate × 0.6 + win rate × 0.4
           </p>
         </div>
         <span className="text-[10px] text-text-muted bg-surface border border-border px-2 py-1 rounded">
-          Patch 1.8.94
+          {patchLabel}
         </span>
       </div>
 

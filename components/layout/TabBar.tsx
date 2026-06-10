@@ -5,12 +5,12 @@ import { useDraftStore } from "@/store/useDraftStore";
 import { cn } from "@/lib/utils";
 import type { TabId } from "@/lib/types";
 
-const TABS: { id: TabId; label: string; icon: React.ReactNode; shortLabel: string }[] = [
-  { id: "draftsim", label: "Draft Simulator",    shortLabel: "Draft",    icon: <Swords size={16} /> },
-  { id: "counter",  label: "Counter Picker",    shortLabel: "Counter",  icon: <Shield size={16} /> },
-  { id: "winrate",  label: "Win Rate",           shortLabel: "Win Rate", icon: <TrendingUp size={16} /> },
-  { id: "ban",      label: "Ban Recommender",    shortLabel: "Ban",      icon: <Ban size={16} /> },
-  { id: "compare",  label: "Hero Compare",       shortLabel: "Compare",  icon: <BarChart2 size={16} /> },
+const TABS: { id: TabId; label: string; shortLabel: string; icon: React.ReactNode }[] = [
+  { id: "draftsim", label: "Draft Simulator", shortLabel: "Draft", icon: <Swords size={15} /> },
+  { id: "counter", label: "Counter Picker", shortLabel: "Counter", icon: <Shield size={15} /> },
+  { id: "winrate", label: "Win Rate", shortLabel: "Win Rate", icon: <TrendingUp size={15} /> },
+  { id: "ban", label: "Ban Recommender", shortLabel: "Ban", icon: <Ban size={15} /> },
+  { id: "compare", label: "Hero Compare", shortLabel: "Compare", icon: <BarChart2 size={15} /> },
 ];
 
 interface TabBarProps {
@@ -23,43 +23,51 @@ export function TabBar({ mobile = false }: TabBarProps) {
 
   if (mobile) {
     return (
-      <nav className="bg-surface border-t border-border flex items-stretch">
-        {TABS.map((tab) => (
-          <button
-            key={tab.id}
-            type="button"
-            onClick={() => setTab(tab.id)}
-            className={cn(
-              "flex-1 flex flex-col items-center justify-center gap-1 py-2 px-1 text-[10px] transition-colors",
-              activeTab === tab.id
-                ? "text-primary border-t-2 border-primary -mt-px bg-primary/5"
-                : "text-text-muted hover:text-text-primary"
-            )}
-          >
-            {tab.icon}
-            <span>{tab.shortLabel}</span>
-          </button>
-        ))}
+      <nav className="bg-surface border-t border-border">
+        <div className="flex items-stretch">
+          {TABS.map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setTab(tab.id)}
+              className={cn(
+                "relative flex-1 flex flex-col items-center justify-center gap-0.5 py-2 min-w-0 transition-colors",
+                activeTab === tab.id
+                  ? "text-primary bg-primary/5"
+                  : "text-text-muted hover:text-text-primary"
+              )}
+            >
+              <span className="flex items-center justify-center">{tab.icon}</span>
+              <span className="text-[10px] font-medium truncate w-full text-center px-0.5">
+                {tab.shortLabel}
+              </span>
+              {activeTab === tab.id && (
+                <span className="absolute top-0 left-1/2 -translate-x-1/2 h-0.5 w-6 bg-primary rounded-full" />
+              )}
+            </button>
+          ))}
+        </div>
       </nav>
     );
   }
 
   return (
-    <nav className="max-w-5xl mx-auto px-3 flex items-center gap-1 py-1">
+    <nav className="flex-1 min-w-0 flex p-1 gap-0.5 rounded-xl bg-surface border border-border overflow-x-auto scrollbar-none">
       {TABS.map((tab) => (
         <button
           key={tab.id}
           type="button"
           onClick={() => setTab(tab.id)}
+          title={tab.label}
           className={cn(
-            "flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+            "flex-1 min-w-[4.5rem] flex items-center justify-center gap-1.5 px-2 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-all",
             activeTab === tab.id
-              ? "bg-primary/15 text-primary"
-              : "text-text-muted hover:text-text-primary hover:bg-surface"
+              ? "bg-primary text-white shadow-sm"
+              : "text-text-muted hover:text-text-primary hover:bg-background/60"
           )}
         >
           {tab.icon}
-          {tab.label}
+          <span>{tab.shortLabel}</span>
         </button>
       ))}
     </nav>

@@ -53,7 +53,7 @@ export function getAvgTierScore(team: Hero[]): number {
   return average(team.map((h) => tierToScore(h.tier)));
 }
 
-export function getBanCandidates(heroes: Hero[], limit = 10): BanCandidate[] {
+export function getBanCandidates(heroes: Hero[], limit?: number): BanCandidate[] {
   const reasonMap: Record<string, string> = {
     fanny: "High mobility, impossible to catch",
     ling: "Wall-jump makes him untargetable",
@@ -77,12 +77,13 @@ export function getBanCandidates(heroes: Hero[], limit = 10): BanCandidate[] {
     tigreal: "Reliable AOE initiation",
   };
 
-  return heroes
+  const ranked = heroes
     .map((hero) => ({
       hero,
       banScore: hero.banRate * 0.6 + hero.winRate * 0.4,
       reason: reasonMap[hero.id] ?? "Strong this patch",
     }))
-    .sort((a, b) => b.banScore - a.banScore)
-    .slice(0, limit);
+    .sort((a, b) => b.banScore - a.banScore);
+
+  return limit ? ranked.slice(0, limit) : ranked;
 }

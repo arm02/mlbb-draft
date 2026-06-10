@@ -1,18 +1,20 @@
 /**
  * POST /api/refresh
- * Re-fetches hero portrait URLs from MLBB Fandom wiki and updates /public/heroes/*.webp
- * Returns updated hero count and timestamp.
- *
- * No auth required (local dev). For production add CRON_SECRET guard if desired.
+ * Updates hero stats from mlbb.gg (Mythic rank) and portrait images from Fandom wiki.
  */
 
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { existsSync, mkdirSync, writeFileSync, readFileSync } from "fs";
 import { join } from "path";
 import https from "https";
+import type { Hero } from "@/lib/types";
+import { refreshHeroStats } from "@/lib/mlbb-stats";
+import { fetchAllRankStats } from "@/lib/mlbb-rank-stats";
 
 const IMG_DIR = join(process.cwd(), "public", "heroes");
 const HEROES_JSON = join(process.cwd(), "public", "data", "heroes.json");
+const META_JSON = join(process.cwd(), "public", "data", "meta.json");
+const RANK_STATS_JSON = join(process.cwd(), "public", "data", "rank-stats.json");
 
 function fetchBuffer(url: string): Promise<Buffer> {
   return new Promise((resolve, reject) => {
@@ -54,24 +56,73 @@ async function getPortraitUrls(names: string[]): Promise<Record<string, string>>
   return result;
 }
 
-export async function POST() {
+export async function POST(req: NextRequest) {
+  const password = req.headers.get("x-refresh-password");
+  const expected = process.env.REFRESH_PASSWORD;
+
+  if (!expected) {
+    return NextResponse.json(
+      { error: "Refresh is not configured" },
+      { status: 503 }
+    );
+  }
+
+  if (!password || password !== expected) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   try {
     if (!existsSync(IMG_DIR)) mkdirSync(IMG_DIR, { recursive: true });
 
-    const heroes: Array<{ id: string; name: string }> = JSON.parse(
-      readFileSync(HEROES_JSON, "utf-8")
+    const localHeroes: Hero[] = JSON.parse(readFileSync(HEROES_JSON, "utf-8"));
+
+    // 1. Refresh counters + hero metadata from mlbb.gg API
+    const statsResult = await refreshHeroStats(localHeroes);
+    writeFileSync(HEROES_JSON, JSON.stringify(statsResult.heroes, null, 2));
+
+    // 2. Refresh win/ban/pick rates for all ranks + pro from mlbb.gg statistics
+    const rankStatsResult = await fetchAllRankStats();
+    writeFileSync(
+      RANK_STATS_JSON,
+      JSON.stringify(
+        {
+          refreshedAt: rankStatsResult.refreshedAt,
+          source: "mlbb.gg statistics",
+          bundle: rankStatsResult.bundle,
+        },
+        null,
+        2
+      )
     );
 
-    const uniqueNames = [...new Set(heroes.map((h) => h.name))];
+    writeFileSync(
+      META_JSON,
+      JSON.stringify(
+        {
+          patch: statsResult.patch,
+          source: "mlbb.gg · all ranks + counters",
+          refreshedAt: new Date().toISOString(),
+          statsUpdated: statsResult.statsUpdated,
+          statsSkipped: statsResult.statsSkipped,
+          countersUpdated: statsResult.countersUpdated,
+          rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+        },
+        null,
+        2
+      )
+    );
+
+    // 3. Refresh portrait images from Fandom wiki
+    const uniqueNames = [...new Set(statsResult.heroes.map((h) => h.name))];
     const portraits = await getPortraitUrls(uniqueNames);
 
     const { default: sharp } = await import("sharp");
-    let ok = 0;
-    let fail = 0;
+    let imagesOk = 0;
+    let imagesFail = 0;
 
-    for (const hero of heroes) {
+    for (const hero of statsResult.heroes) {
       const pUrl = portraits[hero.name];
-      if (!pUrl) { fail++; continue; }
+      if (!pUrl) { imagesFail++; continue; }
 
       const dest = join(IMG_DIR, `${hero.id}.webp`);
       try {
@@ -80,26 +131,22 @@ export async function POST() {
           .resize(64, 64, { fit: "cover", position: "top" })
           .webp({ quality: 88 })
           .toFile(dest);
-        ok++;
-      } catch { fail++; }
+        imagesOk++;
+      } catch { imagesFail++; }
     }
-
-    // Bump patch label to show freshness
-    const heroData: Array<Record<string, unknown>> = JSON.parse(
-      readFileSync(HEROES_JSON, "utf-8")
-    );
-    const updated = heroData.map((h) => ({
-      ...h,
-      patch: new Date().toISOString().slice(0, 10),
-    }));
-    writeFileSync(HEROES_JSON, JSON.stringify(updated, null, 2));
 
     return NextResponse.json({
       success: true,
-      total: heroes.length,
-      imagesUpdated: ok,
-      imagesFailed: fail,
+      total: statsResult.heroes.length,
+      patch: statsResult.patch,
+      statsUpdated: statsResult.statsUpdated,
+      statsSkipped: statsResult.statsSkipped,
+      countersUpdated: statsResult.countersUpdated,
+      rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+      imagesUpdated: imagesOk,
+      imagesFailed: imagesFail,
       refreshedAt: new Date().toISOString(),
+      source: "mlbb.gg + Fandom wiki",
     });
   } catch (err) {
     return NextResponse.json(

@@ -1,10 +1,16 @@
 import { create } from "zustand";
 import type { TabId } from "@/lib/types";
 import { buildEmptySlots, type DraftSlot } from "@/lib/draft";
+import { DEFAULT_MODE, DEFAULT_RANK, type RankFilter, type StatsMode } from "@/lib/ranks";
 
 interface DraftStore {
   activeTab: TabId;
   setTab: (tab: TabId) => void;
+
+  statsMode: StatsMode;
+  statsRank: RankFilter;
+  setStatsMode: (mode: StatsMode) => void;
+  setStatsRank: (rank: RankFilter) => void;
 
   // Counter tab
   enemyPicks: string[];
@@ -39,6 +45,11 @@ interface DraftStore {
 export const useDraftStore = create<DraftStore>((set) => ({
   activeTab: "draftsim",
   setTab: (tab) => set({ activeTab: tab }),
+
+  statsMode: DEFAULT_MODE,
+  statsRank: DEFAULT_RANK,
+  setStatsMode: (mode) => set({ statsMode: mode }),
+  setStatsRank: (rank) => set({ statsRank: rank }),
 
   enemyPicks: [],
   addEnemyPick: (id) =>

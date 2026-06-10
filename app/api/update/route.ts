@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFileSync } from "fs";
+import { writeFileSync, readFileSync, existsSync } from "fs";
 import { join } from "path";
+import type { Hero } from "@/lib/types";
+import { refreshHeroStats } from "@/lib/mlbb-stats";
+import { fetchAllRankStats } from "@/lib/mlbb-rank-stats";
 
-const FALLBACK_DATA_URL =
-  "https://raw.githubusercontent.com/nicholasgasior/mlbb-data/master/heroes.json";
+const HEROES_JSON = join(process.cwd(), "public", "data", "heroes.json");
+const META_JSON = join(process.cwd(), "public", "data", "meta.json");
+const RANK_STATS_JSON = join(process.cwd(), "public", "data", "rank-stats.json");
 
 export async function POST(req: NextRequest) {
   const secret = req.headers.get("x-cron-secret");
@@ -13,22 +17,49 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const res = await fetch(FALLBACK_DATA_URL, { next: { revalidate: 0 } });
+    const localHeroes: Hero[] = JSON.parse(readFileSync(HEROES_JSON, "utf-8"));
+    const result = await refreshHeroStats(localHeroes);
+    const rankStatsResult = await fetchAllRankStats();
 
-    if (!res.ok) {
-      return NextResponse.json(
-        { error: "Failed to fetch upstream data" },
-        { status: 502 }
-      );
-    }
+    writeFileSync(HEROES_JSON, JSON.stringify(result.heroes, null, 2));
+    writeFileSync(
+      RANK_STATS_JSON,
+      JSON.stringify(
+        {
+          refreshedAt: rankStatsResult.refreshedAt,
+          source: "mlbb.gg statistics",
+          bundle: rankStatsResult.bundle,
+        },
+        null,
+        2
+      )
+    );
 
-    const data = await res.json();
-    const filePath = join(process.cwd(), "public", "data", "heroes.json");
-    writeFileSync(filePath, JSON.stringify(data, null, 2), "utf-8");
+    writeFileSync(
+      META_JSON,
+      JSON.stringify(
+        {
+          patch: result.patch,
+          source: "mlbb.gg · all ranks + counters",
+          refreshedAt: new Date().toISOString(),
+          statsUpdated: result.statsUpdated,
+          statsSkipped: result.statsSkipped,
+          countersUpdated: result.countersUpdated,
+          rankStatsRefreshedAt: rankStatsResult.refreshedAt,
+        },
+        null,
+        2
+      )
+    );
 
     return NextResponse.json({
       success: true,
-      count: Array.isArray(data) ? data.length : 0,
+      count: result.heroes.length,
+      patch: result.patch,
+      statsUpdated: result.statsUpdated,
+      statsSkipped: result.statsSkipped,
+      countersUpdated: result.countersUpdated,
+      rankStatsRefreshedAt: rankStatsResult.refreshedAt,
       updatedAt: new Date().toISOString(),
     });
   } catch (err) {
