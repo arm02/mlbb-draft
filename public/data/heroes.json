@@ -54,7 +54,19 @@
     "strongAgainst": [
       "chip",
       "freya",
-      "dyrroth"
+      "dyrroth",
+      "kaja",
+      "suyou",
+      "arlott",
+      "karina",
+      "helcurt",
+      "gusion",
+      "julian",
+      "nolan",
+      "joy",
+      "zilong",
+      "aamon",
+      "popol_kupa"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -99,7 +111,17 @@
       "lapu_lapu",
       "martis",
       "guinevere",
-      "kadita"
+      "arlott",
+      "argus",
+      "joy",
+      "kagura",
+      "kadita",
+      "sora",
+      "marcel",
+      "wanwan",
+      "diggie",
+      "angela",
+      "mathilda"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -143,12 +165,17 @@
       "lunox"
     ],
     "strongAgainst": [
+      "kaja",
+      "lancelot",
+      "yve",
       "esmeralda",
       "nana",
-      "yve",
-      "miya",
       "pharsa",
-      "layla"
+      "layla",
+      "miya",
+      "ixia",
+      "hanabi",
+      "floryn"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -235,11 +262,22 @@
     "strongAgainst": [
       "edith",
       "roger",
+      "bane",
+      "harley",
       "cyclops",
       "change",
-      "miya",
       "valir",
-      "layla"
+      "kimmy",
+      "marcel",
+      "natan",
+      "moskov",
+      "layla",
+      "miya",
+      "bruno",
+      "granger",
+      "ixia",
+      "melissa",
+      "hanabi"
     ],
     "weakAgainst": [
       "fanny",
@@ -283,11 +321,13 @@
       "lunox"
     ],
     "strongAgainst": [
-      "lolita",
       "tigreal",
+      "lolita",
       "atlas",
       "alucard",
       "khaleed",
+      "bane",
+      "obsidia",
       "cecilion",
       "zhuxin"
     ],
@@ -340,7 +380,10 @@
     ],
     "strongAgainst": [
       "alucard",
-      "cecilion"
+      "karina",
+      "hanzo",
+      "cecilion",
+      "brody"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -384,7 +427,14 @@
       "lunox"
     ],
     "strongAgainst": [
-      "miya"
+      "ling",
+      "joy",
+      "zilong",
+      "obsidia",
+      "moskov",
+      "miya",
+      "melissa",
+      "claude"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -426,14 +476,25 @@
       "akai"
     ],
     "strongAgainst": [
-      "chou",
-      "freya",
       "alucard",
+      "chou",
       "paquito",
+      "freya",
       "dyrroth",
       "yin",
       "roger",
-      "harith"
+      "leomord",
+      "ling",
+      "fanny",
+      "benedetta",
+      "karina",
+      "gusion",
+      "natalia",
+      "julian",
+      "nolan",
+      "joy",
+      "harith",
+      "wanwan"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -491,10 +552,7 @@
       "valentina"
     ],
     "strongAgainst": [
-      "chou",
-      "fanny",
-      "ling",
-      "lancelot"
+      "kaja"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -553,11 +611,16 @@
     "strongAgainst": [
       "fredrinn",
       "alucard",
-      "silvanna",
       "alpha",
-      "odette",
+      "silvanna",
+      "leomord",
+      "saber",
+      "valentina",
       "cyclops",
-      "eudora"
+      "odette",
+      "eudora",
+      "bruno",
+      "brody"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -652,7 +715,15 @@
     ],
     "strongAgainst": [
       "alucard",
-      "khaleed"
+      "khaleed",
+      "suyou",
+      "arlott",
+      "ling",
+      "fanny",
+      "hayabusa",
+      "lancelot",
+      "helcurt",
+      "julian"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -694,8 +765,7 @@
       "valentina"
     ],
     "strongAgainst": [
-      "fanny",
-      "ling"
+      "popol_kupa"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -738,8 +808,7 @@
       "fanny"
     ],
     "strongAgainst": [
-      "mage",
-      "marksman"
+      "leomord"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -836,15 +905,25 @@
       "lunox"
     ],
     "strongAgainst": [
-      "freya",
-      "uranus",
       "alucard",
+      "uranus",
+      "freya",
       "terizla",
       "yu_zhong",
       "phoveus",
+      "lukas",
+      "kalea",
+      "obsidia",
       "esmeralda",
       "harith",
-      "alice"
+      "alice",
+      "kimmy",
+      "rafaela",
+      "claude",
+      "hanabi",
+      "angela",
+      "estes",
+      "floryn"
     ],
     "weakAgainst": [
       "fanny",
@@ -885,20 +964,28 @@
       "lunox"
     ],
     "strongAgainst": [
-      "belerick",
       "franco",
       "johnson",
       "grock",
-      "fredrinn",
-      "atlas",
       "khufra",
+      "belerick",
+      "atlas",
       "chip",
+      "fredrinn",
       "minotaur",
-      "chou",
       "alucard",
-      "terizla",
+      "chou",
       "minsitthar",
-      "silvanna"
+      "terizla",
+      "silvanna",
+      "leomord",
+      "masha",
+      "argus",
+      "ling",
+      "fanny",
+      "joy",
+      "sora",
+      "carmilla"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -997,8 +1084,17 @@
       "kaja"
     ],
     "strongAgainst": [
+      "sun",
+      "yi_sun_shin",
+      "nolan",
+      "novaria",
+      "xavier",
       "luo_yi",
-      "irithel"
+      "kimmy",
+      "irithel",
+      "brody",
+      "rafaela",
+      "hanabi"
     ],
     "weakAgainst": [
       "baxia",
@@ -1039,10 +1135,8 @@
       "minsitthar"
     ],
     "strongAgainst": [
-      "fanny",
-      "lancelot",
-      "benedetta",
-      "ling"
+      "bane",
+      "sora"
     ],
     "weakAgainst": [
       "khufra",
@@ -1083,7 +1177,10 @@
       "kaja"
     ],
     "strongAgainst": [
-      "gloo"
+      "gloo",
+      "bane",
+      "sun",
+      "masha"
     ],
     "weakAgainst": [
       "chou",
@@ -1223,6 +1320,9 @@
     ],
     "strongAgainst": [
       "alucard",
+      "ling",
+      "hayabusa",
+      "hanzo",
       "odette"
     ],
     "weakAgainst": [
@@ -1266,10 +1366,16 @@
     ],
     "strongAgainst": [
       "chou",
-      "freya",
       "paquito",
+      "freya",
       "martis",
       "ruby",
+      "leomord",
+      "suyou",
+      "arlott",
+      "ling",
+      "fanny",
+      "benedetta",
       "harith"
     ],
     "weakAgainst": [
@@ -1311,7 +1417,9 @@
       "kaja"
     ],
     "strongAgainst": [
-      "marksman"
+      "ling",
+      "hayabusa",
+      "lancelot"
     ],
     "weakAgainst": [
       "chou",
@@ -1496,6 +1604,11 @@
     "strongAgainst": [
       "paquito",
       "yin",
+      "lukas",
+      "cici",
+      "benedetta",
+      "yi_sun_shin",
+      "valentina",
       "harith"
     ],
     "weakAgainst": [
@@ -1534,6 +1647,9 @@
       "baxia"
     ],
     "strongAgainst": [
+      "bane",
+      "cici",
+      "julian",
       "esmeralda",
       "cecilion",
       "vexana"
@@ -1580,8 +1696,7 @@
       "khufra"
     ],
     "strongAgainst": [
-      "marksman",
-      "mage"
+      "hanzo"
     ],
     "weakAgainst": [
       "atlas",
@@ -1618,11 +1733,14 @@
       "kaja"
     ],
     "strongAgainst": [
-      "johnson",
       "tigreal",
+      "johnson",
       "atlas",
       "jawhead",
-      "yin"
+      "yin",
+      "fanny",
+      "saber",
+      "melissa"
     ],
     "weakAgainst": [
       "chou",
@@ -1663,8 +1781,7 @@
       "karina"
     ],
     "strongAgainst": [
-      "lesley",
-      "moskov"
+      "hanzo"
     ],
     "weakAgainst": [
       "chou",
@@ -1705,8 +1822,8 @@
       "minotaur"
     ],
     "strongAgainst": [
-      "fredrinn",
       "barats",
+      "fredrinn",
       "baxia",
       "khaleed",
       "hilda"
@@ -1876,7 +1993,12 @@
     ],
     "strongAgainst": [
       "gloo",
-      "roger"
+      "roger",
+      "sun",
+      "ling",
+      "fanny",
+      "hayabusa",
+      "lancelot"
     ],
     "weakAgainst": [
       "esmeralda",
@@ -1902,17 +2024,23 @@
     "pickRate": 0.39,
     "banRate": 0.26,
     "counters": [
-      "chou",
-      "esmeralda"
+      "moskov",
+      "xborg",
+      "wanwan",
+      "karrie",
+      "lunox"
     ],
     "counteredBy": [
-      "chou",
-      "esmeralda"
+      "moskov",
+      "xborg",
+      "wanwan",
+      "karrie",
+      "lunox"
     ],
     "strongAgainst": [
+      "tigreal",
       "hylos",
       "gatotkaca",
-      "tigreal",
       "barats",
       "baxia",
       "ruby"
@@ -1994,20 +2122,23 @@
       "fanny"
     ],
     "strongAgainst": [
-      "belerick",
       "johnson",
       "gatotkaca",
-      "edith",
+      "belerick",
       "atlas",
+      "edith",
       "barats",
       "baxia",
-      "uranus",
       "akai",
+      "uranus",
       "terizla",
       "phoveus",
       "thamuz",
       "ruby",
-      "alice"
+      "balmond",
+      "cici",
+      "alice",
+      "carmilla"
     ],
     "weakAgainst": [
       "chou",
@@ -2036,14 +2167,31 @@
     "pickRate": 0.32,
     "banRate": 0.25,
     "counters": [
-      "chou"
+      "yve",
+      "lapu_lapu",
+      "grock",
+      "chou",
+      "lolita",
+      "yu_zhong",
+      "hayabusa"
     ],
     "counteredBy": [
-      "chou"
+      "yve",
+      "lapu_lapu",
+      "grock",
+      "chou",
+      "lolita",
+      "yu_zhong",
+      "hayabusa"
     ],
     "strongAgainst": [
+      "fanny",
+      "nolan",
+      "joy",
       "pharsa",
-      "faramis"
+      "faramis",
+      "ixia",
+      "estes"
     ],
     "weakAgainst": [
       "chou"
@@ -2088,8 +2236,7 @@
       "kaja"
     ],
     "strongAgainst": [
-      "mage",
-      "support"
+      "hanzo"
     ],
     "weakAgainst": [
       "chou",
@@ -2116,12 +2263,18 @@
     "pickRate": 1.84,
     "banRate": 44.28,
     "counters": [
-      "chou",
-      "vale"
+      "lapu_lapu",
+      "alucard",
+      "alice",
+      "ruby",
+      "karina"
     ],
     "counteredBy": [
-      "chou",
-      "vale"
+      "lapu_lapu",
+      "alucard",
+      "alice",
+      "ruby",
+      "karina"
     ],
     "strongAgainst": [
       "tank",
@@ -2152,12 +2305,20 @@
     "pickRate": 0.6,
     "banRate": 12.7,
     "counters": [
-      "chou",
-      "khufra"
+      "barats",
+      "gloo",
+      "valir",
+      "akai",
+      "khufra",
+      "minsitthar"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "barats",
+      "gloo",
+      "valir",
+      "akai",
+      "khufra",
+      "minsitthar"
     ],
     "strongAgainst": [
       "marksman"
@@ -2188,26 +2349,51 @@
     "pickRate": 0.09,
     "banRate": 1.58,
     "counters": [
-      "diggie",
-      "atlas"
+      "faramis",
+      "atlas",
+      "alice",
+      "valir",
+      "tigreal",
+      "hylos"
     ],
     "counteredBy": [
-      "diggie",
-      "atlas"
+      "faramis",
+      "atlas",
+      "alice",
+      "valir",
+      "tigreal",
+      "hylos"
     ],
     "strongAgainst": [
-      "freya",
-      "lapu_lapu",
       "alucard",
       "paquito",
+      "freya",
+      "lapu_lapu",
       "badang",
       "jawhead",
       "martis",
       "guinevere",
       "roger",
+      "lukas",
+      "suyou",
+      "arlott",
+      "aulus",
+      "argus",
+      "ling",
+      "fanny",
+      "hayabusa",
+      "yi_sun_shin",
+      "joy",
+      "kagura",
       "esmeralda",
       "lylia",
-      "kadita"
+      "kadita",
+      "sora",
+      "wanwan",
+      "claude",
+      "hanabi",
+      "diggie",
+      "mathilda"
     ],
     "weakAgainst": [
       "diggie",
@@ -2236,12 +2422,20 @@
     "pickRate": 0.28,
     "banRate": 0.72,
     "counters": [
-      "chou",
-      "khufra"
+      "fredrinn",
+      "wanwan",
+      "tigreal",
+      "minsitthar",
+      "franco",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "fredrinn",
+      "wanwan",
+      "tigreal",
+      "minsitthar",
+      "franco",
+      "kaja"
     ],
     "strongAgainst": [
       "mage",
@@ -2273,12 +2467,18 @@
     "pickRate": 1.39,
     "banRate": 29.83,
     "counters": [
-      "chou",
-      "atlas"
+      "fredrinn",
+      "tigreal",
+      "minsitthar",
+      "fanny",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
-      "atlas"
+      "fredrinn",
+      "tigreal",
+      "minsitthar",
+      "fanny",
+      "kaja"
     ],
     "strongAgainst": [
       "mage",
@@ -2311,12 +2511,16 @@
     "pickRate": 0.25,
     "banRate": 0.86,
     "counters": [
-      "chou",
-      "paquito"
+      "phoveus",
+      "valentina",
+      "baxia",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
-      "paquito"
+      "phoveus",
+      "valentina",
+      "baxia",
+      "kaja"
     ],
     "strongAgainst": [
       "tank",
@@ -2384,16 +2588,24 @@
     "pickRate": 0.55,
     "banRate": 1.86,
     "counters": [
-      "chou",
-      "paquito"
+      "wanwan",
+      "akai",
+      "franco",
+      "karina",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
-      "paquito"
+      "wanwan",
+      "akai",
+      "franco",
+      "karina",
+      "kaja"
     ],
     "strongAgainst": [
       "minsitthar",
-      "yin"
+      "yin",
+      "masha",
+      "karrie"
     ],
     "weakAgainst": [
       "chou",
@@ -2421,16 +2633,23 @@
     "pickRate": 0.05,
     "banRate": 0.27,
     "counters": [
-      "chou",
-      "paquito"
+      "lapu_lapu",
+      "cici",
+      "lesley",
+      "argus",
+      "akai"
     ],
     "counteredBy": [
-      "chou",
-      "paquito"
+      "lapu_lapu",
+      "cici",
+      "lesley",
+      "argus",
+      "akai"
     ],
     "strongAgainst": [
       "yu_zhong",
-      "guinevere"
+      "guinevere",
+      "saber"
     ],
     "weakAgainst": [
       "chou",
@@ -2457,10 +2676,22 @@
     "pickRate": 0.24,
     "banRate": 2.05,
     "counters": [
-      "chou"
+      "fanny",
+      "harley",
+      "gusion",
+      "karina",
+      "natalia",
+      "hayabusa",
+      "kaja"
     ],
     "counteredBy": [
-      "chou"
+      "fanny",
+      "harley",
+      "gusion",
+      "karina",
+      "natalia",
+      "hayabusa",
+      "kaja"
     ],
     "strongAgainst": [
       "fighter",
@@ -2489,15 +2720,20 @@
     "pickRate": 0.35,
     "banRate": 3.03,
     "counters": [
-      "chou",
-      "khufra"
+      "phoveus",
+      "xborg",
+      "wanwan",
+      "yu_zhong"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "phoveus",
+      "xborg",
+      "wanwan",
+      "yu_zhong"
     ],
     "strongAgainst": [
-      "badang"
+      "badang",
+      "masha"
     ],
     "weakAgainst": [
       "chou",
@@ -2523,29 +2759,71 @@
     "pickRate": 0.61,
     "banRate": 3.8,
     "counters": [
-      "chou",
+      "zilong",
+      "bane",
+      "eudora",
+      "saber",
+      "martis",
+      "ruby",
+      "moskov",
+      "fredrinn",
+      "akai",
       "khufra",
-      "atlas"
+      "minsitthar",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
+      "zilong",
+      "bane",
+      "eudora",
+      "saber",
+      "martis",
+      "ruby",
+      "moskov",
+      "fredrinn",
+      "akai",
       "khufra",
-      "atlas"
+      "minsitthar",
+      "kaja"
     ],
     "strongAgainst": [
       "gloo",
       "guinevere",
       "xborg",
+      "suyou",
+      "aulus",
+      "yi_sun_shin",
+      "nolan",
+      "zetian",
+      "kagura",
       "lylia",
-      "zhask",
+      "aurora",
       "gord",
+      "zhask",
       "change",
-      "luo_yi",
       "pharsa",
-      "zhuxin",
       "faramis",
+      "zhuxin",
+      "vale",
+      "luo_yi",
+      "kimmy",
+      "marcel",
+      "natan",
+      "lesley",
+      "beatrix",
+      "layla",
       "irithel",
-      "layla"
+      "karrie",
+      "clint",
+      "wanwan",
+      "granger",
+      "ixia",
+      "popol_kupa",
+      "rafaela",
+      "hanabi",
+      "diggie",
+      "estes",
+      "floryn"
     ],
     "weakAgainst": [
       "chou",
@@ -2572,21 +2850,53 @@
     "pickRate": 0.17,
     "banRate": 0.22,
     "counters": [
-      "khufra",
+      "helcurt",
+      "jawhead",
+      "badang",
+      "zilong",
+      "bruno",
       "saber",
-      "karina"
+      "ruby",
+      "melissa",
+      "belerick",
+      "moskov",
+      "fredrinn",
+      "akai",
+      "khufra",
+      "minsitthar",
+      "karina",
+      "kaja"
     ],
     "counteredBy": [
-      "khufra",
+      "helcurt",
+      "jawhead",
+      "badang",
+      "zilong",
+      "bruno",
       "saber",
-      "karina"
+      "ruby",
+      "melissa",
+      "belerick",
+      "moskov",
+      "fredrinn",
+      "akai",
+      "khufra",
+      "minsitthar",
+      "karina",
+      "kaja"
     ],
     "strongAgainst": [
       "atlas",
+      "hayabusa",
+      "hanzo",
       "yve",
       "gord",
       "change",
-      "layla"
+      "novaria",
+      "xavier",
+      "layla",
+      "granger",
+      "hanabi"
     ],
     "weakAgainst": [
       "khufra",
@@ -2615,18 +2925,21 @@
     "pickRate": 0.34,
     "banRate": 1.11,
     "counters": [
-      "chou",
-      "karina",
-      "saber"
+      "mathilda",
+      "phoveus",
+      "khufra",
+      "minsitthar"
     ],
     "counteredBy": [
-      "chou",
-      "karina",
-      "saber"
+      "mathilda",
+      "phoveus",
+      "khufra",
+      "minsitthar"
     ],
     "strongAgainst": [
       "dyrroth",
       "xborg",
+      "selena",
       "vexana"
     ],
     "weakAgainst": [
@@ -2654,19 +2967,22 @@
     "pickRate": 0.8,
     "banRate": 1.69,
     "counters": [
-      "chou",
-      "karina",
-      "atlas"
+      "badang",
+      "ruby",
+      "fredrinn",
+      "hylos"
     ],
     "counteredBy": [
-      "chou",
-      "karina",
-      "atlas"
+      "badang",
+      "ruby",
+      "fredrinn",
+      "hylos"
     ],
     "strongAgainst": [
       "nana",
       "vexana",
-      "valir"
+      "valir",
+      "vale"
     ],
     "weakAgainst": [
       "chou",
@@ -2693,28 +3009,63 @@
     "pickRate": 0.8,
     "banRate": 7.11,
     "counters": [
-      "khufra",
-      "chou",
-      "atlas"
+      "vexana",
+      "jawhead",
+      "badang",
+      "zilong",
+      "bruno",
+      "ling",
+      "eudora",
+      "saber",
+      "ruby",
+      "fredrinn",
+      "kaja"
     ],
     "counteredBy": [
-      "khufra",
-      "chou",
-      "atlas"
+      "vexana",
+      "jawhead",
+      "badang",
+      "zilong",
+      "bruno",
+      "ling",
+      "eudora",
+      "saber",
+      "ruby",
+      "fredrinn",
+      "kaja"
     ],
     "strongAgainst": [
+      "bane",
+      "aulus",
+      "yi_sun_shin",
+      "nolan",
+      "harley",
+      "selena",
+      "yve",
       "nana",
       "cyclops",
-      "yve",
-      "cecilion",
+      "aurora",
       "gord",
       "change",
-      "luo_yi",
-      "valir",
+      "cecilion",
+      "novaria",
       "pharsa",
-      "zhuxin",
+      "xavier",
+      "valir",
       "faramis",
-      "layla"
+      "zhuxin",
+      "vale",
+      "luo_yi",
+      "kimmy",
+      "lesley",
+      "beatrix",
+      "layla",
+      "karrie",
+      "granger",
+      "ixia",
+      "rafaela",
+      "hanabi",
+      "diggie"
     ],
     "weakAgainst": [
       "khufra",
@@ -2741,16 +3092,20 @@
     "pickRate": 1.65,
     "banRate": 14.16,
     "counters": [
-      "chou",
+      "eudora",
+      "saber",
       "khufra",
-      "karina"
+      "tigreal"
     ],
     "counteredBy": [
-      "chou",
+      "eudora",
+      "saber",
       "khufra",
-      "karina"
+      "tigreal"
     ],
     "strongAgainst": [
+      "aulus",
+      "kagura",
       "zhask",
       "zhuxin"
     ],
@@ -2779,28 +3134,61 @@
     "pickRate": 0.61,
     "banRate": 3.19,
     "counters": [
-      "chou",
-      "tigreal",
-      "atlas"
+      "vexana",
+      "floryn",
+      "angela",
+      "saber",
+      "gatotkaca",
+      "khufra",
+      "tigreal"
     ],
     "counteredBy": [
-      "chou",
-      "tigreal",
-      "atlas"
+      "vexana",
+      "floryn",
+      "angela",
+      "saber",
+      "gatotkaca",
+      "khufra",
+      "tigreal"
     ],
     "strongAgainst": [
       "edith",
-      "freya",
       "alucard",
-      "badang",
+      "freya",
       "minsitthar",
+      "badang",
       "aldous",
       "roger",
+      "sun",
+      "aulus",
+      "argus",
+      "ling",
+      "helcurt",
+      "yi_sun_shin",
+      "hanzo",
+      "natalia",
+      "julian",
+      "zilong",
+      "aamon",
+      "obsidia",
       "harith",
       "zhask",
+      "kimmy",
+      "natan",
+      "lesley",
+      "moskov",
+      "beatrix",
+      "layla",
       "miya",
+      "bruno",
       "irithel",
-      "layla"
+      "karrie",
+      "wanwan",
+      "ixia",
+      "popol_kupa",
+      "melissa",
+      "claude",
+      "hanabi"
     ],
     "weakAgainst": [
       "chou",
@@ -2828,19 +3216,29 @@
     "pickRate": 0.93,
     "banRate": 33.6,
     "counters": [
-      "chou",
-      "khufra"
+      "fredrinn",
+      "tigreal",
+      "karina"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "fredrinn",
+      "tigreal",
+      "karina"
     ],
     "strongAgainst": [
-      "odette",
+      "ling",
       "yve",
+      "odette",
       "eudora",
+      "novaria",
       "pharsa",
-      "layla"
+      "xavier",
+      "vale",
+      "natan",
+      "lesley",
+      "layla",
+      "ixia",
+      "hanabi"
     ],
     "weakAgainst": [
       "chou",
@@ -2866,17 +3264,42 @@
     "pickRate": 0.29,
     "banRate": 3.96,
     "counters": [
-      "chou",
-      "atlas"
+      "roger",
+      "jawhead",
+      "aldous",
+      "yin",
+      "clint",
+      "ling",
+      "gatotkaca",
+      "xavier",
+      "moskov",
+      "joy",
+      "harley",
+      "karina",
+      "natalia"
     ],
     "counteredBy": [
-      "chou",
-      "atlas"
+      "roger",
+      "jawhead",
+      "aldous",
+      "yin",
+      "clint",
+      "ling",
+      "gatotkaca",
+      "xavier",
+      "moskov",
+      "joy",
+      "harley",
+      "karina",
+      "natalia"
     ],
     "strongAgainst": [
       "yve",
       "cecilion",
-      "layla"
+      "xavier",
+      "layla",
+      "ixia",
+      "hanabi"
     ],
     "weakAgainst": [
       "chou",
@@ -2903,20 +3326,41 @@
     "pickRate": 0.34,
     "banRate": 3.28,
     "counters": [
-      "chou",
-      "atlas"
+      "yi_sun_shin",
+      "selena",
+      "lesley",
+      "saber",
+      "zetian",
+      "rafaela",
+      "khufra",
+      "karina"
     ],
     "counteredBy": [
-      "chou",
-      "atlas"
+      "yi_sun_shin",
+      "selena",
+      "lesley",
+      "saber",
+      "zetian",
+      "rafaela",
+      "khufra",
+      "karina"
     ],
     "strongAgainst": [
       "minsitthar",
       "roger",
+      "aulus",
+      "hanzo",
+      "zilong",
+      "obsidia",
       "zhask",
+      "layla",
       "miya",
       "irithel",
-      "layla"
+      "karrie",
+      "hanabi",
+      "angela",
+      "estes",
+      "floryn"
     ],
     "weakAgainst": [
       "chou",
@@ -2945,19 +3389,30 @@
     "pickRate": 1.03,
     "banRate": 13.33,
     "counters": [
-      "chou",
-      "khufra"
+      "alucard",
+      "phoveus",
+      "fanny",
+      "karina",
+      "hayabusa",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "alucard",
+      "phoveus",
+      "fanny",
+      "karina",
+      "hayabusa",
+      "kaja"
     ],
     "strongAgainst": [
       "tigreal",
-      "atlas",
       "khufra",
+      "atlas",
       "chip",
       "terizla",
+      "natalia",
+      "kalea",
+      "saber",
       "luo_yi"
     ],
     "weakAgainst": [
@@ -2984,20 +3439,42 @@
     "pickRate": 0.11,
     "banRate": 0.64,
     "counters": [
-      "chou",
+      "bane",
+      "clint",
+      "saber",
+      "melissa",
+      "belerick",
+      "moskov",
+      "akai",
       "khufra",
-      "phoveus"
+      "tigreal",
+      "franco",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
+      "bane",
+      "clint",
+      "saber",
+      "melissa",
+      "belerick",
+      "moskov",
+      "akai",
       "khufra",
-      "phoveus"
+      "tigreal",
+      "franco",
+      "kaja"
     ],
     "strongAgainst": [
-      "nana",
+      "hanzo",
       "yve",
+      "nana",
+      "aurora",
       "gord",
-      "layla"
+      "xavier",
+      "layla",
+      "clint",
+      "ixia",
+      "hanabi"
     ],
     "weakAgainst": [
       "chou",
@@ -3024,19 +3501,26 @@
     "pickRate": 0.21,
     "banRate": 0.81,
     "counters": [
-      "chou",
-      "atlas",
-      "phoveus"
+      "bane",
+      "alucard",
+      "saber",
+      "khufra",
+      "tigreal",
+      "fanny",
+      "hayabusa"
     ],
     "counteredBy": [
-      "chou",
-      "atlas",
-      "phoveus"
+      "bane",
+      "alucard",
+      "saber",
+      "khufra",
+      "tigreal",
+      "fanny",
+      "hayabusa"
     ],
     "strongAgainst": [
-      "mage",
-      "marksman",
-      "tank"
+      "estes",
+      "floryn"
     ],
     "weakAgainst": [
       "chou",
@@ -3065,12 +3549,18 @@
     "pickRate": 1.33,
     "banRate": 6.11,
     "counters": [
-      "chou",
-      "khufra"
+      "fredrinn",
+      "khufra",
+      "tigreal",
+      "yu_zhong",
+      "karina"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "fredrinn",
+      "khufra",
+      "tigreal",
+      "yu_zhong",
+      "karina"
     ],
     "strongAgainst": [
       "mage",
@@ -3101,18 +3591,26 @@
     "pickRate": 1.37,
     "banRate": 27.13,
     "counters": [
-      "chou",
-      "phoveus"
+      "aamon",
+      "diggie",
+      "fanny",
+      "harley"
     ],
     "counteredBy": [
-      "chou",
-      "phoveus"
+      "aamon",
+      "diggie",
+      "fanny",
+      "harley"
     ],
     "strongAgainst": [
       "tigreal",
       "atlas",
+      "jawhead",
       "yu_zhong",
-      "jawhead"
+      "natalia",
+      "kalea",
+      "rafaela",
+      "angela"
     ],
     "weakAgainst": [
       "chou",
@@ -3140,12 +3638,22 @@
     "pickRate": 0.27,
     "banRate": 1.66,
     "counters": [
+      "hanabi",
+      "yi_sun_shin",
+      "faramis",
+      "zetian",
       "diggie",
-      "atlas"
+      "valentina",
+      "baxia"
     ],
     "counteredBy": [
+      "hanabi",
+      "yi_sun_shin",
+      "faramis",
+      "zetian",
       "diggie",
-      "atlas"
+      "valentina",
+      "baxia"
     ],
     "strongAgainst": [
       "dyrroth",
@@ -3175,16 +3683,43 @@
     "pickRate": 1.21,
     "banRate": 38.38,
     "counters": [
-      "chou",
-      "khufra"
+      "yi_sun_shin",
+      "miya",
+      "floryn",
+      "angela",
+      "masha",
+      "barats",
+      "martis"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "yi_sun_shin",
+      "miya",
+      "floryn",
+      "angela",
+      "masha",
+      "barats",
+      "martis"
     ],
     "strongAgainst": [
+      "ling",
+      "fanny",
+      "hayabusa",
+      "karina",
+      "gusion",
+      "natalia",
+      "nolan",
+      "joy",
+      "harley",
+      "obsidia",
+      "kimmy",
+      "natan",
+      "lesley",
+      "beatrix",
+      "layla",
+      "bruno",
       "irithel",
-      "layla"
+      "granger",
+      "mathilda"
     ],
     "weakAgainst": [
       "chou",
@@ -3213,15 +3748,25 @@
     "pickRate": 1.38,
     "banRate": 0.86,
     "counters": [
-      "chou",
-      "khufra"
+      "miya",
+      "lesley",
+      "belerick",
+      "tigreal",
+      "karina",
+      "natalia"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "miya",
+      "lesley",
+      "belerick",
+      "tigreal",
+      "karina",
+      "natalia"
     ],
     "strongAgainst": [
-      "marksman"
+      "ling",
+      "fanny",
+      "hayabusa"
     ],
     "weakAgainst": [
       "chou",
@@ -3247,17 +3792,26 @@
     "pickRate": 0.94,
     "banRate": 12.82,
     "counters": [
-      "chou",
-      "atlas",
-      "phoveus"
+      "floryn",
+      "angela",
+      "lesley",
+      "tigreal",
+      "karina"
     ],
     "counteredBy": [
-      "chou",
-      "atlas",
-      "phoveus"
+      "floryn",
+      "angela",
+      "lesley",
+      "tigreal",
+      "karina"
     ],
     "strongAgainst": [
-      "layla"
+      "zetian",
+      "moskov",
+      "beatrix",
+      "layla",
+      "ixia",
+      "hanabi"
     ],
     "weakAgainst": [
       "chou",
@@ -3287,18 +3841,22 @@
     "pickRate": 1.27,
     "banRate": 75.03,
     "counters": [
-      "chou",
-      "khufra",
-      "atlas"
+      "saber",
+      "lolita",
+      "hayabusa"
     ],
     "counteredBy": [
-      "chou",
-      "khufra",
-      "atlas"
+      "saber",
+      "lolita",
+      "hayabusa"
     ],
     "strongAgainst": [
+      "aulus",
+      "hanzo",
+      "zetian",
       "change",
-      "layla"
+      "layla",
+      "hanabi"
     ],
     "weakAgainst": [
       "chou",
@@ -3328,16 +3886,23 @@
     "pickRate": 0.93,
     "banRate": 5.55,
     "counters": [
-      "chou",
-      "phoveus"
+      "valir",
+      "diggie",
+      "benedetta",
+      "wanwan",
+      "hayabusa"
     ],
     "counteredBy": [
-      "chou",
-      "phoveus"
+      "valir",
+      "diggie",
+      "benedetta",
+      "wanwan",
+      "hayabusa"
     ],
     "strongAgainst": [
-      "marksman",
-      "support"
+      "natalia",
+      "ixia",
+      "angela"
     ],
     "weakAgainst": [
       "chou",
@@ -3364,12 +3929,20 @@
     "pickRate": 0.54,
     "banRate": 2.84,
     "counters": [
-      "chou",
-      "khufra"
+      "saber",
+      "grock",
+      "belerick",
+      "baxia",
+      "karina",
+      "natalia"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "saber",
+      "grock",
+      "belerick",
+      "baxia",
+      "karina",
+      "natalia"
     ],
     "strongAgainst": [
       "mage",
@@ -3399,23 +3972,28 @@
     "pickRate": 0.37,
     "banRate": 1.11,
     "counters": [
-      "valentina",
-      "lancelot",
-      "beatrix"
+      "faramis",
+      "franco",
+      "fanny",
+      "gusion",
+      "kaja"
     ],
     "counteredBy": [
-      "valentina",
-      "lancelot",
-      "beatrix"
+      "faramis",
+      "franco",
+      "fanny",
+      "gusion",
+      "kaja"
     ],
     "strongAgainst": [
-      "franco",
       "tigreal",
-      "atlas",
+      "franco",
       "khufra",
+      "atlas",
       "jawhead",
-      "vexana",
-      "eudora"
+      "valentina",
+      "eudora",
+      "vexana"
     ],
     "weakAgainst": [
       "valentina",
@@ -3442,25 +4020,34 @@
     "pickRate": 0.08,
     "banRate": 0.2,
     "counters": [
-      "lancelot",
-      "ling",
-      "benedetta"
+      "barats",
+      "kagura",
+      "phoveus",
+      "wanwan"
     ],
     "counteredBy": [
-      "lancelot",
-      "ling",
-      "benedetta"
+      "barats",
+      "kagura",
+      "phoveus",
+      "wanwan"
     ],
     "strongAgainst": [
+      "tigreal",
       "grock",
       "gatotkaca",
-      "tigreal",
       "atlas",
       "chip",
       "minotaur",
       "terizla",
+      "lukas",
+      "kalea",
+      "aurora",
       "kadita",
-      "faramis"
+      "faramis",
+      "vale",
+      "sora",
+      "marcel",
+      "carmilla"
     ],
     "weakAgainst": [
       "lancelot",
@@ -3511,6 +4098,7 @@
     "strongAgainst": [
       "barats",
       "baxia",
+      "bane",
       "zhuxin"
     ],
     "weakAgainst": [
@@ -3540,20 +4128,23 @@
     "counters": [],
     "counteredBy": [],
     "strongAgainst": [
-      "belerick",
+      "hylos",
       "johnson",
       "grock",
-      "hylos",
+      "belerick",
       "barats",
-      "lapu_lapu",
       "baxia",
-      "uranus",
       "akai",
+      "uranus",
+      "lapu_lapu",
       "khaleed",
       "thamuz",
       "ruby",
+      "balmond",
       "esmeralda",
-      "alice"
+      "alice",
+      "marcel",
+      "carmilla"
     ],
     "weakAgainst": [
       "valentina",
@@ -3600,12 +4191,16 @@
     "strongAgainst": [
       "edith",
       "chou",
+      "paquito",
       "freya",
       "lapu_lapu",
-      "paquito",
       "jawhead",
       "aldous",
-      "harith"
+      "harith",
+      "hanabi",
+      "diggie",
+      "angela",
+      "mathilda"
     ],
     "weakAgainst": [
       "valentina",
@@ -3684,9 +4279,9 @@
       "kaja"
     ],
     "strongAgainst": [
-      "fredrinn",
       "atlas",
       "barats",
+      "fredrinn",
       "baxia",
       "uranus",
       "terizla"
@@ -3791,10 +4386,18 @@
     "pickRate": 0.48,
     "banRate": 0.31,
     "counters": [
-      "assassin"
+      "diggie",
+      "joy",
+      "valentina",
+      "fanny",
+      "hayabusa"
     ],
     "counteredBy": [
-      "assassin"
+      "diggie",
+      "joy",
+      "valentina",
+      "fanny",
+      "hayabusa"
     ],
     "strongAgainst": [
       "tigreal"
@@ -3912,8 +4515,10 @@
       "diggie"
     ],
     "strongAgainst": [
-      "tank",
-      "fighter"
+      "fanny",
+      "hayabusa",
+      "gusion",
+      "clint"
     ],
     "weakAgainst": [
       "assassin"
@@ -4117,7 +4722,9 @@
     ],
     "strongAgainst": [
       "gloo",
-      "alpha"
+      "alpha",
+      "hayabusa",
+      "karina"
     ],
     "weakAgainst": [
       "assassin"
@@ -4160,8 +4767,11 @@
     ],
     "strongAgainst": [
       "gloo",
+      "kaja",
+      "sun",
       "vexana",
-      "layla"
+      "layla",
+      "hanabi"
     ],
     "weakAgainst": [
       "assassin"
@@ -4201,7 +4811,10 @@
     ],
     "strongAgainst": [
       "gord",
-      "layla"
+      "layla",
+      "ixia",
+      "melissa",
+      "hanabi"
     ],
     "weakAgainst": [
       "assassin"
@@ -4219,24 +4832,30 @@
       "Mid"
     ],
     "specialty": [
-      "Burst",
-      "Poke"
+      "Damage"
     ],
-    "tier": "A",
-    "winRate": 51.3,
-    "pickRate": 7.1,
-    "banRate": 8,
+    "tier": "D",
+    "winRate": 47.79,
+    "pickRate": 0.45,
+    "banRate": 0.28,
     "counters": [
-      "tank",
-      "fighter"
+      "helcurt",
+      "ling",
+      "alucard",
+      "hanzo",
+      "joy",
+      "hayabusa"
     ],
     "counteredBy": [
-      "assassin",
-      "lancelot"
+      "helcurt",
+      "ling",
+      "alucard",
+      "hanzo",
+      "joy",
+      "hayabusa"
     ],
     "strongAgainst": [
-      "tank",
-      "fighter"
+      "hanzo"
     ],
     "weakAgainst": [
       "assassin",
@@ -4255,19 +4874,23 @@
       "Mid"
     ],
     "specialty": [
-      "Burst",
-      "Crowd Control"
+      "Burst"
     ],
-    "tier": "A",
-    "winRate": 51,
-    "pickRate": 6.4,
-    "banRate": 6.7,
+    "tier": "B",
+    "winRate": 48.7,
+    "pickRate": 0.58,
+    "banRate": 1.76,
     "counters": [
-      "tank",
-      "fighter"
+      "helcurt",
+      "ling",
+      "alucard",
+      "hayabusa"
     ],
     "counteredBy": [
-      "assassin"
+      "helcurt",
+      "ling",
+      "alucard",
+      "hayabusa"
     ],
     "strongAgainst": [
       "tank",
@@ -4312,27 +4935,30 @@
       "hayabusa"
     ],
     "strongAgainst": [
-      "belerick",
-      "franco",
-      "grock",
-      "hylos",
-      "gatotkaca",
       "tigreal",
-      "fredrinn",
+      "franco",
+      "hylos",
+      "grock",
+      "gatotkaca",
+      "belerick",
       "barats",
-      "chou",
+      "fredrinn",
       "baxia",
       "akai",
-      "badang",
-      "khaleed",
-      "terizla",
+      "chou",
       "minsitthar",
-      "phoveus",
+      "badang",
       "jawhead",
+      "terizla",
+      "khaleed",
       "yin",
+      "phoveus",
       "alpha",
       "ruby",
       "hilda",
+      "kaja",
+      "leomord",
+      "selena",
       "faramis"
     ],
     "weakAgainst": [
@@ -4376,11 +5002,14 @@
     ],
     "strongAgainst": [
       "tigreal",
-      "atlas",
       "khufra",
+      "atlas",
       "barats",
       "gloo",
       "guinevere",
+      "kaja",
+      "kalea",
+      "kagura",
       "kadita"
     ],
     "weakAgainst": [
@@ -4426,8 +5055,8 @@
     ],
     "strongAgainst": [
       "hylos",
-      "fredrinn",
       "barats",
+      "fredrinn",
       "baxia",
       "uranus",
       "terizla",
@@ -4482,27 +5111,38 @@
     "id": "kimmy",
     "name": "Kimmy",
     "role": [
-      "Mage",
-      "Marksman"
+      "Marksman",
+      "Mage"
     ],
     "lane": [
-      "Mid",
-      "Gold"
+      "Gold",
+      "Mid"
     ],
     "specialty": [
-      "Burst",
-      "Poke"
+      "Damage",
+      "Magic Damage"
     ],
-    "tier": "B",
-    "winRate": 49,
-    "pickRate": 4.8,
-    "banRate": 2.5,
+    "tier": "C",
+    "winRate": 47.56,
+    "pickRate": 0.71,
+    "banRate": 0.97,
     "counters": [
-      "tank",
-      "fighter"
+      "alucard",
+      "saber",
+      "lolita",
+      "baxia",
+      "fanny",
+      "karina",
+      "hayabusa"
     ],
     "counteredBy": [
-      "assassin"
+      "alucard",
+      "saber",
+      "lolita",
+      "baxia",
+      "fanny",
+      "karina",
+      "hayabusa"
     ],
     "strongAgainst": [
       "tank",
@@ -4524,19 +5164,25 @@
       "Mid"
     ],
     "specialty": [
-      "Burst",
-      "Crowd Control"
+      "Burst"
     ],
     "tier": "A",
-    "winRate": 50.6,
-    "pickRate": 5.9,
-    "banRate": 5,
+    "winRate": 51.16,
+    "pickRate": 0.87,
+    "banRate": 0.55,
     "counters": [
-      "fighter",
-      "sun"
+      "helcurt",
+      "lancelot",
+      "valentina",
+      "fanny",
+      "hayabusa"
     ],
     "counteredBy": [
-      "assassin"
+      "helcurt",
+      "lancelot",
+      "valentina",
+      "fanny",
+      "hayabusa"
     ],
     "strongAgainst": [
       "fighter",
@@ -4552,30 +5198,34 @@
     "id": "natan",
     "name": "Natan",
     "role": [
-      "Marksman",
-      "Mage"
+      "Marksman"
     ],
     "lane": [
       "Gold"
     ],
     "specialty": [
-      "Damage",
       "Burst"
     ],
     "tier": "A",
-    "winRate": 51,
-    "pickRate": 6.6,
-    "banRate": 6.3,
+    "winRate": 51.39,
+    "pickRate": 0.3,
+    "banRate": 0.33,
     "counters": [
-      "tank",
-      "fighter"
+      "helcurt",
+      "saber",
+      "lolita",
+      "fanny",
+      "karina"
     ],
     "counteredBy": [
-      "assassin"
+      "helcurt",
+      "saber",
+      "lolita",
+      "fanny",
+      "karina"
     ],
     "strongAgainst": [
-      "tank",
-      "fighter"
+      "alucard"
     ],
     "weakAgainst": [
       "assassin"
@@ -4587,28 +5237,34 @@
     "id": "sora",
     "name": "Sora",
     "role": [
-      "Mage",
-      "Marksman"
+      "Fighter",
+      "Assassin"
     ],
     "lane": [
-      "Mid",
+      "Exp",
       "Gold"
     ],
     "specialty": [
-      "Burst",
-      "Poke"
+      "Charge",
+      "Burst"
     ],
-    "tier": "A",
-    "winRate": 51.6,
-    "pickRate": 7.5,
-    "banRate": 9.3,
+    "tier": "S",
+    "winRate": 48.59,
+    "pickRate": 0.53,
+    "banRate": 39.22,
     "counters": [
-      "fighter",
-      "tank"
+      "chou",
+      "akai",
+      "franco",
+      "valentina",
+      "kaja"
     ],
     "counteredBy": [
-      "assassin",
-      "valentina"
+      "chou",
+      "akai",
+      "franco",
+      "valentina",
+      "kaja"
     ],
     "strongAgainst": [
       "fighter",
@@ -4625,25 +5281,32 @@
     "id": "marcel",
     "name": "Marcel",
     "role": [
-      "Mage"
+      "Support"
     ],
     "lane": [
-      "Mid"
+      "Roam"
     ],
     "specialty": [
-      "Burst",
-      "Crowd Control"
+      "Crowd Control",
+      "Support"
     ],
-    "tier": "A",
-    "winRate": 51.1,
-    "pickRate": 6.7,
-    "banRate": 7,
+    "tier": "S",
+    "winRate": 53.94,
+    "pickRate": 0.14,
+    "banRate": 21.31,
     "counters": [
-      "fighter",
-      "tank"
+      "franco",
+      "lolita",
+      "valentina",
+      "lunox",
+      "fanny"
     ],
     "counteredBy": [
-      "assassin"
+      "franco",
+      "lolita",
+      "valentina",
+      "lunox",
+      "fanny"
     ],
     "strongAgainst": [
       "fighter",
@@ -4659,32 +5322,45 @@
     "id": "lesley",
     "name": "Lesley",
     "role": [
-      "Marksman"
+      "Marksman",
+      "Assassin"
     ],
     "lane": [
       "Gold"
     ],
     "specialty": [
-      "Reap",
-      "Damage"
+      "Finisher",
+      "Burst"
     ],
-    "tier": "A",
-    "winRate": 52.3,
-    "pickRate": 8.1,
-    "banRate": 4.2,
+    "tier": "B",
+    "winRate": 45.83,
+    "pickRate": 1.76,
+    "banRate": 12.48,
     "counters": [
-      "moskov",
-      "miya"
+      "helcurt",
+      "saber",
+      "fanny",
+      "karina",
+      "hayabusa"
     ],
     "counteredBy": [
-      "ling",
-      "lancelot",
-      "benedetta",
-      "gusion"
+      "helcurt",
+      "saber",
+      "fanny",
+      "karina",
+      "hayabusa"
     ],
     "strongAgainst": [
-      "moskov",
-      "miya"
+      "gatotkaca",
+      "belerick",
+      "terizla",
+      "thamuz",
+      "masha",
+      "natalia",
+      "zilong",
+      "aamon",
+      "bruno",
+      "claude"
     ],
     "weakAgainst": [
       "ling",
@@ -4705,22 +5381,25 @@
       "Gold"
     ],
     "specialty": [
-      "Damage",
-      "Burst"
+      "Finisher"
     ],
-    "tier": "S",
-    "winRate": 53.1,
-    "pickRate": 11.6,
-    "banRate": 19.8,
+    "tier": "B",
+    "winRate": 49.64,
+    "pickRate": 0.48,
+    "banRate": 0.85,
     "counters": [
-      "lesley",
-      "moskov",
-      "miya"
+      "saber",
+      "aamon",
+      "fanny",
+      "karina",
+      "hayabusa"
     ],
     "counteredBy": [
-      "ling",
-      "lancelot",
-      "benedetta"
+      "saber",
+      "aamon",
+      "fanny",
+      "karina",
+      "hayabusa"
     ],
     "strongAgainst": [
       "lesley",
@@ -4745,25 +5424,30 @@
       "Gold"
     ],
     "specialty": [
-      "Damage",
-      "Poke"
+      "Finisher"
     ],
-    "tier": "B",
-    "winRate": 48.4,
-    "pickRate": 5.9,
-    "banRate": 2.1,
+    "tier": "C",
+    "winRate": 47.79,
+    "pickRate": 0.85,
+    "banRate": 0.46,
     "counters": [
-      "lesley"
+      "aamon",
+      "belerick",
+      "lolita",
+      "karina"
     ],
     "counteredBy": [
-      "ling",
-      "fanny",
-      "lancelot",
-      "benedetta",
-      "beatrix"
+      "aamon",
+      "belerick",
+      "lolita",
+      "karina"
     ],
     "strongAgainst": [
-      "lesley"
+      "balmond",
+      "ling",
+      "fanny",
+      "hanzo",
+      "joy"
     ],
     "weakAgainst": [
       "ling",
@@ -4808,7 +5492,9 @@
     "strongAgainst": [
       "tigreal",
       "minotaur",
-      "alpha"
+      "alpha",
+      "saber",
+      "zilong"
     ],
     "weakAgainst": [
       "ling",
@@ -4892,14 +5578,22 @@
     "pickRate": 0.13,
     "banRate": 0.12,
     "counters": [
-      "assassin"
+      "lesley",
+      "saber",
+      "barats",
+      "lolita",
+      "karina"
     ],
     "counteredBy": [
-      "assassin"
+      "lesley",
+      "saber",
+      "barats",
+      "lolita",
+      "karina"
     ],
     "strongAgainst": [
-      "tank",
-      "fighter"
+      "ling",
+      "hayabusa"
     ],
     "weakAgainst": [
       "assassin"
@@ -4924,14 +5618,22 @@
     "pickRate": 0.61,
     "banRate": 1.25,
     "counters": [
-      "assassin"
+      "eudora",
+      "granger",
+      "joy",
+      "fanny"
     ],
     "counteredBy": [
-      "assassin"
+      "eudora",
+      "granger",
+      "joy",
+      "fanny"
     ],
     "strongAgainst": [
       "alucard",
-      "aldous"
+      "aldous",
+      "hanzo",
+      "joy"
     ],
     "weakAgainst": [
       "assassin"
@@ -4956,31 +5658,41 @@
     "pickRate": 0.67,
     "banRate": 3.03,
     "counters": [
-      "assassin"
+      "argus",
+      "fanny",
+      "karina",
+      "natalia",
+      "hayabusa"
     ],
     "counteredBy": [
-      "assassin"
+      "argus",
+      "fanny",
+      "karina",
+      "natalia",
+      "hayabusa"
     ],
     "strongAgainst": [
+      "hylos",
       "johnson",
       "grock",
-      "hylos",
       "gatotkaca",
       "edith",
-      "fredrinn",
       "barats",
-      "lapu_lapu",
+      "fredrinn",
       "baxia",
-      "uranus",
       "akai",
-      "khaleed",
+      "uranus",
+      "lapu_lapu",
       "terizla",
+      "khaleed",
       "phoveus",
       "thamuz",
       "ruby",
+      "balmond",
       "xborg",
       "esmeralda",
-      "alice"
+      "alice",
+      "carmilla"
     ],
     "weakAgainst": [
       "assassin"
@@ -5044,27 +5756,39 @@
     "pickRate": 0.13,
     "banRate": 0.4,
     "counters": [
-      "chou",
-      "khufra"
+      "khufra",
+      "franco",
+      "fanny",
+      "karina",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "khufra",
+      "franco",
+      "fanny",
+      "karina",
+      "kaja"
     ],
     "strongAgainst": [
-      "belerick",
+      "tigreal",
       "franco",
       "johnson",
-      "tigreal",
-      "fredrinn",
+      "belerick",
       "barats",
+      "fredrinn",
       "baxia",
-      "dyrroth",
       "terizla",
-      "silvanna",
+      "dyrroth",
       "yin",
+      "aldous",
       "thamuz",
-      "aldous"
+      "silvanna",
+      "balmond",
+      "arlott",
+      "argus",
+      "cici",
+      "selena",
+      "valentina"
     ],
     "weakAgainst": [
       "chou",
@@ -5090,14 +5814,21 @@
     "pickRate": 1.45,
     "banRate": 5.14,
     "counters": [
-      "assassin"
+      "ling",
+      "saber",
+      "lolita",
+      "fanny",
+      "hayabusa"
     ],
     "counteredBy": [
-      "assassin"
+      "ling",
+      "saber",
+      "lolita",
+      "fanny",
+      "hayabusa"
     ],
     "strongAgainst": [
-      "fighter",
-      "mage"
+      "clint"
     ],
     "weakAgainst": [
       "assassin"
@@ -5122,10 +5853,16 @@
     "pickRate": 0.32,
     "banRate": 0.97,
     "counters": [
-      "assassin"
+      "alucard",
+      "gatotkaca",
+      "barats",
+      "diggie"
     ],
     "counteredBy": [
-      "assassin"
+      "alucard",
+      "gatotkaca",
+      "barats",
+      "diggie"
     ],
     "strongAgainst": [
       "tank",
@@ -5154,10 +5891,16 @@
     "pickRate": 0.34,
     "banRate": 0.42,
     "counters": [
-      "assassin"
+      "chip",
+      "tigreal",
+      "fanny",
+      "karina"
     ],
     "counteredBy": [
-      "assassin"
+      "chip",
+      "tigreal",
+      "fanny",
+      "karina"
     ],
     "strongAgainst": [
       "mage",
@@ -5186,17 +5929,25 @@
     "pickRate": 0.75,
     "banRate": 1.86,
     "counters": [
-      "chou",
-      "khufra"
+      "pharsa",
+      "martis",
+      "belerick",
+      "lolita",
+      "karina"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "pharsa",
+      "martis",
+      "belerick",
+      "lolita",
+      "karina"
     ],
     "strongAgainst": [
       "tigreal",
       "paquito",
       "aldous",
+      "ling",
+      "joy",
       "yve"
     ],
     "weakAgainst": [
@@ -5223,10 +5974,34 @@
     "pickRate": 0.91,
     "banRate": 2.8,
     "counters": [
-      "assassin"
+      "helcurt",
+      "claude",
+      "bane",
+      "selena",
+      "hanzo",
+      "pharsa",
+      "aamon",
+      "joy",
+      "lolita",
+      "hylos",
+      "fanny",
+      "karina",
+      "hayabusa"
     ],
     "counteredBy": [
-      "assassin"
+      "helcurt",
+      "claude",
+      "bane",
+      "selena",
+      "hanzo",
+      "pharsa",
+      "aamon",
+      "joy",
+      "lolita",
+      "hylos",
+      "fanny",
+      "karina",
+      "hayabusa"
     ],
     "strongAgainst": [
       "fighter",
@@ -5255,19 +6030,52 @@
     "pickRate": 4.02,
     "banRate": 17,
     "counters": [
-      "chou",
-      "khufra"
+      "helcurt",
+      "ling",
+      "alucard",
+      "alice",
+      "hanzo",
+      "pharsa",
+      "aamon",
+      "joy",
+      "esmeralda",
+      "lolita",
+      "baxia",
+      "hylos",
+      "fanny",
+      "harley",
+      "karina",
+      "natalia",
+      "hayabusa",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "helcurt",
+      "ling",
+      "alucard",
+      "alice",
+      "hanzo",
+      "pharsa",
+      "aamon",
+      "joy",
+      "esmeralda",
+      "lolita",
+      "baxia",
+      "hylos",
+      "fanny",
+      "harley",
+      "karina",
+      "natalia",
+      "hayabusa",
+      "kaja"
     ],
     "strongAgainst": [
-      "franco",
       "tigreal",
-      "atlas",
+      "franco",
       "khufra",
-      "terizla"
+      "atlas",
+      "terizla",
+      "kalea"
     ],
     "weakAgainst": [
       "chou",
@@ -5293,16 +6101,23 @@
     "pickRate": 0.87,
     "banRate": 1.07,
     "counters": [
-      "chou",
-      "khufra"
+      "lesley",
+      "belerick",
+      "baxia",
+      "karina",
+      "kaja"
     ],
     "counteredBy": [
-      "chou",
-      "khufra"
+      "lesley",
+      "belerick",
+      "baxia",
+      "karina",
+      "kaja"
     ],
     "strongAgainst": [
       "hylos",
-      "yve"
+      "yve",
+      "ixia"
     ],
     "weakAgainst": [
       "chou",
@@ -5328,14 +6143,21 @@
     "pickRate": 0.33,
     "banRate": 1.98,
     "counters": [
-      "lancelot",
-      "valentina"
+      "alucard",
+      "zetian",
+      "baxia",
+      "fanny",
+      "hayabusa"
     ],
     "counteredBy": [
-      "lancelot",
-      "valentina"
+      "alucard",
+      "zetian",
+      "baxia",
+      "fanny",
+      "hayabusa"
     ],
     "strongAgainst": [
+      "natalia",
       "valir"
     ],
     "weakAgainst": [
@@ -5362,14 +6184,25 @@
     "pickRate": 1.44,
     "banRate": 10.72,
     "counters": [
-      "lancelot",
-      "chou"
+      "selena",
+      "zetian",
+      "esmeralda",
+      "franco",
+      "baxia",
+      "natalia"
     ],
     "counteredBy": [
-      "lancelot",
-      "chou"
+      "selena",
+      "zetian",
+      "esmeralda",
+      "franco",
+      "baxia",
+      "natalia"
     ],
     "strongAgainst": [
+      "karina",
+      "saber",
+      "aamon",
       "eudora"
     ],
     "weakAgainst": [
@@ -5396,33 +6229,45 @@
     "pickRate": 0.12,
     "banRate": 4.19,
     "counters": [
-      "valentina",
-      "lancelot"
+      "esmeralda",
+      "franco",
+      "fanny",
+      "hayabusa",
+      "kaja"
     ],
     "counteredBy": [
-      "valentina",
-      "lancelot"
+      "esmeralda",
+      "franco",
+      "fanny",
+      "hayabusa",
+      "kaja"
     ],
     "strongAgainst": [
-      "belerick",
+      "tigreal",
       "johnson",
       "grock",
       "gatotkaca",
-      "tigreal",
-      "fredrinn",
-      "atlas",
       "khufra",
-      "minotaur",
+      "belerick",
+      "atlas",
       "barats",
+      "fredrinn",
       "akai",
+      "minotaur",
       "badang",
-      "terizla",
       "jawhead",
+      "terizla",
       "silvanna",
-      "kadita",
+      "kalea",
+      "zetian",
+      "selena",
+      "aurora",
       "eudora",
+      "kadita",
       "valir",
-      "zhuxin"
+      "zhuxin",
+      "brody",
+      "carmilla"
     ],
     "weakAgainst": [
       "valentina",
@@ -5451,20 +6296,23 @@
     "banRate": 0.16,
     "counters": [
       "saber",
-      "karina",
-      "chou"
+      "esmeralda",
+      "franco",
+      "kaja"
     ],
     "counteredBy": [
       "saber",
-      "karina",
-      "chou"
+      "esmeralda",
+      "franco",
+      "kaja"
     ],
     "strongAgainst": [
       "gatotkaca",
       "xborg",
+      "benedetta",
       "yve",
-      "valir",
       "alice",
+      "valir",
       "zhuxin"
     ],
     "weakAgainst": [
@@ -5492,12 +6340,18 @@
     "pickRate": 0.64,
     "banRate": 41.85,
     "counters": [
-      "lancelot",
-      "valentina"
+      "bane",
+      "nolan",
+      "baxia",
+      "fanny",
+      "natalia"
     ],
     "counteredBy": [
-      "lancelot",
-      "valentina"
+      "bane",
+      "nolan",
+      "baxia",
+      "fanny",
+      "natalia"
     ],
     "strongAgainst": [
       "assassin",
@@ -5528,15 +6382,23 @@
     "pickRate": 0.73,
     "banRate": 12.33,
     "counters": [
-      "valentina",
-      "lancelot"
+      "nolan",
+      "baxia",
+      "hylos",
+      "fanny",
+      "natalia"
     ],
     "counteredBy": [
-      "valentina",
-      "lancelot"
+      "nolan",
+      "baxia",
+      "hylos",
+      "fanny",
+      "natalia"
     ],
     "strongAgainst": [
-      "assassin"
+      "karina",
+      "saber",
+      "aamon"
     ],
     "weakAgainst": [
       "valentina",
@@ -5565,11 +6427,19 @@
     "banRate": 0.85,
     "counters": [
       "diggie",
-      "esmeralda"
+      "xborg",
+      "akai",
+      "valentina",
+      "karrie",
+      "lunox"
     ],
     "counteredBy": [
       "diggie",
-      "esmeralda"
+      "xborg",
+      "akai",
+      "valentina",
+      "karrie",
+      "lunox"
     ],
     "strongAgainst": [
       "marksman",

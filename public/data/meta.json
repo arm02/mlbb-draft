@@ -1,8 +1,9 @@
 {
   "patch": "2026-06-10 · Mythic",
-  "source": "mlbb.gg · Mythic rank",
-  "refreshedAt": "2026-06-10T13:35:49.285Z",
-  "statsUpdated": 122,
-  "statsSkipped": 11,
-  "countersUpdated": 67
+  "source": "mlbb.gg · all ranks + counters",
+  "refreshedAt": "2026-06-10T13:47:14.778Z",
+  "statsUpdated": 132,
+  "statsSkipped": 1,
+  "countersUpdated": 132,
+  "rankStatsRefreshedAt": "2026-06-10T13:47:11.164Z"
 }
