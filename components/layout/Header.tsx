@@ -21,7 +21,12 @@ async function postRefresh(_url: string, { arg }: { arg: string }) {
   return res.json();
 }
 
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
+const fetcher = async (url: string) => {
+  const res = await fetch(url);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data?.error ?? "Request failed");
+  return data;
+};
 
 export function Header() {
   const clearAll = useDraftStore((s) => s.clearAll);

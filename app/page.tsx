@@ -15,7 +15,12 @@ import { mergeHeroStats } from "@/lib/hero-stats";
 import type { RankHeroStats } from "@/lib/mlbb-rank-stats";
 import type { Hero } from "@/lib/types";
 
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
+const fetcher = async (url: string) => {
+  const res = await fetch(url);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data?.error ?? "Request failed");
+  return data;
+};
 
 interface StatsResponse {
   stats: Record<string, RankHeroStats>;
