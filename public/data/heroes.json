@@ -1,0 +1,4914 @@
+[
+  {
+    "id": "tigreal",
+    "name": "Tigreal",
+    "role": [
+      "Tank"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Initiator"
+    ],
+    "tier": "A",
+    "winRate": 49.1,
+    "pickRate": 6.8,
+    "banRate": 3.1,
+    "counters": [
+      "chou",
+      "ling",
+      "fanny"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "chou",
+      "ling",
+      "fanny"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "paquito"
+    ],
+    "image": "/heroes/tigreal.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "franco",
+    "name": "Franco",
+    "role": [
+      "Tank"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Hook"
+    ],
+    "tier": "A",
+    "winRate": 50.6,
+    "pickRate": 6.3,
+    "banRate": 5.1,
+    "counters": [
+      "lesley",
+      "beatrix",
+      "fanny"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "diggie",
+      "mathilda"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "beatrix",
+      "fanny"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "diggie",
+      "mathilda"
+    ],
+    "image": "/heroes/franco.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "hylos",
+    "name": "Hylos",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Guard"
+    ],
+    "tier": "B",
+    "winRate": 49.5,
+    "pickRate": 4.2,
+    "banRate": 1.8,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "valentina"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "valentina"
+    ],
+    "image": "/heroes/hylos.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "johnson",
+    "name": "Johnson",
+    "role": [
+      "Tank"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Initiator"
+    ],
+    "tier": "A",
+    "winRate": 50.2,
+    "pickRate": 5.7,
+    "banRate": 4.8,
+    "counters": [
+      "lesley",
+      "beatrix",
+      "moskov"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "diggie",
+      "mathilda"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "beatrix",
+      "moskov"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "diggie",
+      "mathilda"
+    ],
+    "image": "/heroes/johnson.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "lolita",
+    "name": "Lolita",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Guard",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 50.9,
+    "pickRate": 5.1,
+    "banRate": 4.3,
+    "counters": [
+      "beatrix",
+      "lesley",
+      "brody"
+    ],
+    "counteredBy": [
+      "fanny",
+      "hayabusa"
+    ],
+    "strongAgainst": [
+      "beatrix",
+      "lesley",
+      "brody"
+    ],
+    "weakAgainst": [
+      "fanny",
+      "hayabusa"
+    ],
+    "image": "/heroes/lolita.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "grock",
+    "name": "Grock",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lane": [
+      "Roam",
+      "Exp"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Guard"
+    ],
+    "tier": "B",
+    "winRate": 49.8,
+    "pickRate": 4.4,
+    "banRate": 2.3,
+    "counters": [
+      "lesley",
+      "beatrix",
+      "moskov"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "paquito",
+      "diggie"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "beatrix",
+      "moskov"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "paquito",
+      "diggie"
+    ],
+    "image": "/heroes/grock.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "gatotkaca",
+    "name": "Gatotkaca",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lane": [
+      "Roam",
+      "Exp"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Initiator"
+    ],
+    "tier": "B",
+    "winRate": 48.7,
+    "pickRate": 4.1,
+    "banRate": 2.1,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "uranus"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "uranus"
+    ],
+    "image": "/heroes/gatotkaca.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "belerick",
+    "name": "Belerick",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Guard",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 51.2,
+    "pickRate": 5.6,
+    "banRate": 4.7,
+    "counters": [
+      "ling",
+      "fanny"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "diggie"
+    ],
+    "strongAgainst": [
+      "ling",
+      "fanny"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "diggie"
+    ],
+    "image": "/heroes/belerick.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "khufra",
+    "name": "Khufra",
+    "role": [
+      "Tank"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Initiator"
+    ],
+    "tier": "S",
+    "winRate": 51.5,
+    "pickRate": 9.3,
+    "banRate": 14.6,
+    "counters": [
+      "chou",
+      "fanny",
+      "ling",
+      "benedetta"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "mathilda"
+    ],
+    "strongAgainst": [
+      "chou",
+      "fanny",
+      "ling",
+      "benedetta"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "mathilda"
+    ],
+    "image": "/heroes/khufra.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "atlas",
+    "name": "Atlas",
+    "role": [
+      "Tank"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Initiator"
+    ],
+    "tier": "S",
+    "winRate": 52.1,
+    "pickRate": 8.6,
+    "banRate": 12.7,
+    "counters": [
+      "chou",
+      "fanny",
+      "ling",
+      "lancelot"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "mathilda",
+      "diggie"
+    ],
+    "strongAgainst": [
+      "chou",
+      "fanny",
+      "ling",
+      "lancelot"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "mathilda",
+      "diggie"
+    ],
+    "image": "/heroes/atlas.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "barats",
+    "name": "Barats",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 49,
+    "pickRate": 4.8,
+    "banRate": 2.6,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "uranus"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "uranus"
+    ],
+    "image": "/heroes/barats.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "edith",
+    "name": "Edith",
+    "role": [
+      "Tank",
+      "Marksman"
+    ],
+    "lane": [
+      "Roam",
+      "Gold"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Damage"
+    ],
+    "tier": "A",
+    "winRate": 50.5,
+    "pickRate": 6.2,
+    "banRate": 5.8,
+    "counters": [
+      "lesley",
+      "moskov"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "moskov"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/edith.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "fredrinn",
+    "name": "Fredrinn",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Charge"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 6.9,
+    "banRate": 6.3,
+    "counters": [
+      "assassin",
+      "mage"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "uranus"
+    ],
+    "strongAgainst": [
+      "assassin",
+      "mage"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "uranus"
+    ],
+    "image": "/heroes/fredrinn.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "chip",
+    "name": "Chip",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Guard"
+    ],
+    "tier": "A",
+    "winRate": 51.3,
+    "pickRate": 7.1,
+    "banRate": 8.2,
+    "counters": [
+      "fanny",
+      "ling"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "diggie"
+    ],
+    "strongAgainst": [
+      "fanny",
+      "ling"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "diggie"
+    ],
+    "image": "/heroes/chip.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "gloo",
+    "name": "Gloo",
+    "role": [
+      "Tank",
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Charge"
+    ],
+    "tier": "S",
+    "winRate": 52.8,
+    "pickRate": 8.4,
+    "banRate": 11.9,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "uranus"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "uranus"
+    ],
+    "image": "/heroes/gloo.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "minotaur",
+    "name": "Minotaur",
+    "role": [
+      "Tank",
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Guard"
+    ],
+    "tier": "B",
+    "winRate": 48.5,
+    "pickRate": 3.8,
+    "banRate": 1.5,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "diggie",
+      "esmeralda"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "diggie",
+      "esmeralda"
+    ],
+    "image": "/heroes/minotaur.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "baxia",
+    "name": "Baxia",
+    "role": [
+      "Tank"
+    ],
+    "lane": [
+      "Roam",
+      "Jungle"
+    ],
+    "specialty": [
+      "Damage",
+      "Crowd Control"
+    ],
+    "tier": "B",
+    "winRate": 49.2,
+    "pickRate": 4.5,
+    "banRate": 2.8,
+    "counters": [
+      "alucard",
+      "uranus"
+    ],
+    "counteredBy": [
+      "fanny",
+      "ling"
+    ],
+    "strongAgainst": [
+      "alucard",
+      "uranus"
+    ],
+    "weakAgainst": [
+      "fanny",
+      "ling"
+    ],
+    "image": "/heroes/baxia.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "akai",
+    "name": "Akai",
+    "role": [
+      "Tank"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Initiator"
+    ],
+    "tier": "A",
+    "winRate": 50.3,
+    "pickRate": 5.4,
+    "banRate": 3.7,
+    "counters": [
+      "marksman",
+      "mage"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "diggie"
+    ],
+    "strongAgainst": [
+      "marksman",
+      "mage"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "diggie"
+    ],
+    "image": "/heroes/akai.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "uranus",
+    "name": "Uranus",
+    "role": [
+      "Tank"
+    ],
+    "lane": [
+      "Exp",
+      "Roam"
+    ],
+    "specialty": [
+      "Sustain",
+      "Guard"
+    ],
+    "tier": "A",
+    "winRate": 51.7,
+    "pickRate": 5.9,
+    "banRate": 5.2,
+    "counters": [
+      "assassin",
+      "fighter"
+    ],
+    "counteredBy": [
+      "baxia",
+      "esmeralda"
+    ],
+    "strongAgainst": [
+      "assassin",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "baxia",
+      "esmeralda"
+    ],
+    "image": "/heroes/uranus.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "alucard",
+    "name": "Alucard",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Sustain",
+      "Chase"
+    ],
+    "tier": "B",
+    "winRate": 48.9,
+    "pickRate": 5.3,
+    "banRate": 2.4,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "baxia",
+      "chou"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "baxia",
+      "chou"
+    ],
+    "image": "/heroes/alucard.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "chou",
+    "name": "Chou",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Jungle",
+      "Exp"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Initiator"
+    ],
+    "tier": "S",
+    "winRate": 51.8,
+    "pickRate": 14.2,
+    "banRate": 18.5,
+    "counters": [
+      "fanny",
+      "lancelot",
+      "benedetta",
+      "ling"
+    ],
+    "counteredBy": [
+      "khufra",
+      "atlas",
+      "tigreal"
+    ],
+    "strongAgainst": [
+      "fanny",
+      "lancelot",
+      "benedetta",
+      "ling"
+    ],
+    "weakAgainst": [
+      "khufra",
+      "atlas",
+      "tigreal"
+    ],
+    "image": "/heroes/chou.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "lapu_lapu",
+    "name": "Lapu-Lapu",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Damage",
+      "Crowd Control"
+    ],
+    "tier": "B",
+    "winRate": 48.4,
+    "pickRate": 4.7,
+    "banRate": 2.2,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/lapu_lapu.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "freya",
+    "name": "Freya",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp"
+    ],
+    "specialty": [
+      "Charge",
+      "Burst"
+    ],
+    "tier": "B",
+    "winRate": 48.2,
+    "pickRate": 3.9,
+    "banRate": 1.7,
+    "counters": [
+      "tank"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "tank"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito"
+    ],
+    "image": "/heroes/freya.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "paquito",
+    "name": "Paquito",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 51.4,
+    "pickRate": 7.9,
+    "banRate": 9.1,
+    "counters": [
+      "tigreal",
+      "esmeralda",
+      "chou"
+    ],
+    "counteredBy": [
+      "atlas",
+      "khufra",
+      "diggie"
+    ],
+    "strongAgainst": [
+      "tigreal",
+      "esmeralda",
+      "chou"
+    ],
+    "weakAgainst": [
+      "atlas",
+      "khufra",
+      "diggie"
+    ],
+    "image": "/heroes/paquito.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "jawhead",
+    "name": "Jawhead",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Initiator"
+    ],
+    "tier": "B",
+    "winRate": 48.7,
+    "pickRate": 4.9,
+    "banRate": 2.6,
+    "counters": [
+      "chou",
+      "fanny",
+      "ling"
+    ],
+    "counteredBy": [
+      "atlas",
+      "diggie",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "chou",
+      "fanny",
+      "ling"
+    ],
+    "weakAgainst": [
+      "atlas",
+      "diggie",
+      "khufra"
+    ],
+    "image": "/heroes/jawhead.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "minsitthar",
+    "name": "Minsitthar",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Guard"
+    ],
+    "tier": "B",
+    "winRate": 49.3,
+    "pickRate": 4.1,
+    "banRate": 2,
+    "counters": [
+      "fanny",
+      "ling",
+      "chou"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "fanny",
+      "ling",
+      "chou"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "paquito"
+    ],
+    "image": "/heroes/minsitthar.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "badang",
+    "name": "Badang",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp"
+    ],
+    "specialty": [
+      "Burst",
+      "Crowd Control"
+    ],
+    "tier": "B",
+    "winRate": 48.1,
+    "pickRate": 3.6,
+    "banRate": 1.9,
+    "counters": [
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "esmeralda"
+    ],
+    "strongAgainst": [
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "esmeralda"
+    ],
+    "image": "/heroes/badang.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "dyrroth",
+    "name": "Dyrroth",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 51.2,
+    "pickRate": 7.3,
+    "banRate": 7.8,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/dyrroth.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "terizla",
+    "name": "Terizla",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Damage"
+    ],
+    "tier": "B",
+    "winRate": 49.4,
+    "pickRate": 4.3,
+    "banRate": 2.3,
+    "counters": [
+      "tank"
+    ],
+    "counteredBy": [
+      "fanny",
+      "lancelot"
+    ],
+    "strongAgainst": [
+      "tank"
+    ],
+    "weakAgainst": [
+      "fanny",
+      "lancelot"
+    ],
+    "image": "/heroes/terizla.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "khaleed",
+    "name": "Khaleed",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Sustain",
+      "Charge"
+    ],
+    "tier": "A",
+    "winRate": 50.8,
+    "pickRate": 6.1,
+    "banRate": 5.6,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito"
+    ],
+    "image": "/heroes/khaleed.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "phoveus",
+    "name": "Phoveus",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Damage"
+    ],
+    "tier": "A",
+    "winRate": 51.6,
+    "pickRate": 6.7,
+    "banRate": 7.1,
+    "counters": [
+      "fanny",
+      "ling",
+      "chou",
+      "lancelot"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "fanny",
+      "ling",
+      "chou",
+      "lancelot"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "atlas"
+    ],
+    "image": "/heroes/phoveus.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "yu_zhong",
+    "name": "Yu Zhong",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp"
+    ],
+    "specialty": [
+      "Sustain",
+      "Burst"
+    ],
+    "tier": "A",
+    "winRate": 50.9,
+    "pickRate": 6.4,
+    "banRate": 6,
+    "counters": [
+      "assassin",
+      "mage"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "assassin",
+      "mage"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/yu_zhong.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "yin",
+    "name": "Yin",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "A",
+    "winRate": 51.1,
+    "pickRate": 7,
+    "banRate": 7.5,
+    "counters": [
+      "marksman",
+      "mage"
+    ],
+    "counteredBy": [
+      "atlas",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "marksman",
+      "mage"
+    ],
+    "weakAgainst": [
+      "atlas",
+      "khufra"
+    ],
+    "image": "/heroes/yin.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "martis",
+    "name": "Martis",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Chase"
+    ],
+    "tier": "B",
+    "winRate": 49.6,
+    "pickRate": 5.2,
+    "banRate": 3.1,
+    "counters": [
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito"
+    ],
+    "image": "/heroes/martis.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "aldous",
+    "name": "Aldous",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp"
+    ],
+    "specialty": [
+      "Charge",
+      "Burst"
+    ],
+    "tier": "B",
+    "winRate": 49.2,
+    "pickRate": 5.1,
+    "banRate": 3.4,
+    "counters": [
+      "lesley",
+      "moskov"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "moskov"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito",
+      "atlas"
+    ],
+    "image": "/heroes/aldous.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "alpha",
+    "name": "Alpha",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Damage",
+      "Crowd Control"
+    ],
+    "tier": "B",
+    "winRate": 48.6,
+    "pickRate": 3.8,
+    "banRate": 1.8,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito"
+    ],
+    "image": "/heroes/alpha.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "silvanna",
+    "name": "Silvanna",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Burst"
+    ],
+    "tier": "A",
+    "winRate": 50.7,
+    "pickRate": 5.8,
+    "banRate": 5.3,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "esmeralda"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "esmeralda"
+    ],
+    "image": "/heroes/silvanna.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "guinevere",
+    "name": "Guinevere",
+    "role": [
+      "Fighter",
+      "Mage"
+    ],
+    "lane": [
+      "Exp",
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 51.5,
+    "pickRate": 7.2,
+    "banRate": 8,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/guinevere.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "thamuz",
+    "name": "Thamuz",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp"
+    ],
+    "specialty": [
+      "Damage",
+      "Sustain"
+    ],
+    "tier": "A",
+    "winRate": 50.4,
+    "pickRate": 5.5,
+    "banRate": 4.8,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito"
+    ],
+    "image": "/heroes/thamuz.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "ruby",
+    "name": "Ruby",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Sustain"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 5.7,
+    "banRate": 5.2,
+    "counters": [
+      "assassin",
+      "fighter"
+    ],
+    "counteredBy": [
+      "esmeralda",
+      "chou"
+    ],
+    "strongAgainst": [
+      "assassin",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "esmeralda",
+      "chou"
+    ],
+    "image": "/heroes/ruby.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "balmond",
+    "name": "Balmond",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Damage"
+    ],
+    "tier": "B",
+    "winRate": 48.3,
+    "pickRate": 3.5,
+    "banRate": 1.6,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "chou",
+      "esmeralda"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "chou",
+      "esmeralda"
+    ],
+    "image": "/heroes/balmond.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "hilda",
+    "name": "Hilda",
+    "role": [
+      "Fighter",
+      "Tank"
+    ],
+    "lane": [
+      "Exp",
+      "Roam"
+    ],
+    "specialty": [
+      "Burst",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 51.3,
+    "pickRate": 6,
+    "banRate": 5.7,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito"
+    ],
+    "image": "/heroes/hilda.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "xborg",
+    "name": "X.Borg",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Damage",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 49.7,
+    "pickRate": 5,
+    "banRate": 3,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "esmeralda"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "esmeralda"
+    ],
+    "image": "/heroes/xborg.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "bane",
+    "name": "Bane",
+    "role": [
+      "Fighter",
+      "Mage"
+    ],
+    "lane": [
+      "Exp",
+      "Mid"
+    ],
+    "specialty": [
+      "Poke",
+      "Damage"
+    ],
+    "tier": "B",
+    "winRate": 49,
+    "pickRate": 3.9,
+    "banRate": 1.9,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou"
+    ],
+    "image": "/heroes/bane.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "roger",
+    "name": "Roger",
+    "role": [
+      "Fighter",
+      "Marksman"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Chase"
+    ],
+    "tier": "B",
+    "winRate": 48.8,
+    "pickRate": 4.6,
+    "banRate": 2.7,
+    "counters": [
+      "mage",
+      "support"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "mage",
+      "support"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/roger.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "sun",
+    "name": "Sun",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Damage",
+      "Sustain"
+    ],
+    "tier": "A",
+    "winRate": 51.8,
+    "pickRate": 7.4,
+    "banRate": 8.9,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "vale"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "vale"
+    ],
+    "image": "/heroes/sun.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "leomord",
+    "name": "Leomord",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Charge"
+    ],
+    "tier": "B",
+    "winRate": 49.5,
+    "pickRate": 4.9,
+    "banRate": 2.9,
+    "counters": [
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/leomord.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "kaja",
+    "name": "Kaja",
+    "role": [
+      "Fighter",
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Guard"
+    ],
+    "tier": "A",
+    "winRate": 50.6,
+    "pickRate": 5.3,
+    "banRate": 4,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "diggie",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "diggie",
+      "atlas"
+    ],
+    "image": "/heroes/kaja.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "arlott",
+    "name": "Arlott",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 51.4,
+    "pickRate": 6.8,
+    "banRate": 7.4,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/arlott.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "suyou",
+    "name": "Suyou",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "S",
+    "winRate": 52.6,
+    "pickRate": 9.1,
+    "banRate": 14.2,
+    "counters": [
+      "mage",
+      "marksman",
+      "tank"
+    ],
+    "counteredBy": [
+      "chou",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman",
+      "tank"
+    ],
+    "weakAgainst": [
+      "chou",
+      "atlas"
+    ],
+    "image": "/heroes/suyou.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "lukas",
+    "name": "Lukas",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Charge"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 6.5,
+    "banRate": 6.1,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito"
+    ],
+    "image": "/heroes/lukas.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "hirara",
+    "name": "Hirara",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle",
+      "Exp"
+    ],
+    "specialty": [
+      "Burst",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 51.2,
+    "pickRate": 6.3,
+    "banRate": 6.8,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "khufra",
+      "chou"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "khufra",
+      "chou"
+    ],
+    "image": "/heroes/hirara.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "argus",
+    "name": "Argus",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Sustain"
+    ],
+    "tier": "B",
+    "winRate": 48.4,
+    "pickRate": 4.2,
+    "banRate": 2,
+    "counters": [
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito"
+    ],
+    "image": "/heroes/argus.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "masha",
+    "name": "Masha",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Damage",
+      "Sustain"
+    ],
+    "tier": "B",
+    "winRate": 48.8,
+    "pickRate": 4.3,
+    "banRate": 2.1,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "paquito"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "paquito"
+    ],
+    "image": "/heroes/masha.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "aulus",
+    "name": "Aulus",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Damage",
+      "Sustain"
+    ],
+    "tier": "B",
+    "winRate": 48.5,
+    "pickRate": 4,
+    "banRate": 1.8,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "chou"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "chou"
+    ],
+    "image": "/heroes/aulus.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "cici",
+    "name": "Cici",
+    "role": [
+      "Fighter"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 6.4,
+    "banRate": 6.5,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/cici.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "fanny",
+    "name": "Fanny",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Reap",
+      "Chase"
+    ],
+    "tier": "S",
+    "winRate": 54.2,
+    "pickRate": 7.3,
+    "banRate": 28.4,
+    "counters": [
+      "lesley",
+      "beatrix",
+      "moskov"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "beatrix",
+      "moskov"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra",
+      "atlas"
+    ],
+    "image": "/heroes/fanny.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "ling",
+    "name": "Ling",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Reap",
+      "Chase"
+    ],
+    "tier": "S",
+    "winRate": 50.3,
+    "pickRate": 12.8,
+    "banRate": 22.1,
+    "counters": [
+      "fanny",
+      "lesley",
+      "moskov",
+      "beatrix"
+    ],
+    "counteredBy": [
+      "khufra",
+      "saber",
+      "karina"
+    ],
+    "strongAgainst": [
+      "fanny",
+      "lesley",
+      "moskov",
+      "beatrix"
+    ],
+    "weakAgainst": [
+      "khufra",
+      "saber",
+      "karina"
+    ],
+    "image": "/heroes/ling.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "benedetta",
+    "name": "Benedetta",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Exp",
+      "Jungle"
+    ],
+    "specialty": [
+      "Reap",
+      "Damage"
+    ],
+    "tier": "A",
+    "winRate": 49.7,
+    "pickRate": 9.4,
+    "banRate": 11.3,
+    "counters": [
+      "lesley",
+      "beatrix",
+      "moskov"
+    ],
+    "counteredBy": [
+      "chou",
+      "karina",
+      "saber"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "beatrix",
+      "moskov"
+    ],
+    "weakAgainst": [
+      "chou",
+      "karina",
+      "saber"
+    ],
+    "image": "/heroes/benedetta.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "lancelot",
+    "name": "Lancelot",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Reap",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 50.9,
+    "pickRate": 10.2,
+    "banRate": 9.7,
+    "counters": [
+      "lesley",
+      "beatrix",
+      "kagura"
+    ],
+    "counteredBy": [
+      "chou",
+      "karina",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "beatrix",
+      "kagura"
+    ],
+    "weakAgainst": [
+      "chou",
+      "karina",
+      "atlas"
+    ],
+    "image": "/heroes/lancelot.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "hayabusa",
+    "name": "Hayabusa",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Reap",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 8.8,
+    "banRate": 7.6,
+    "counters": [
+      "lesley",
+      "beatrix",
+      "kagura"
+    ],
+    "counteredBy": [
+      "khufra",
+      "chou",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "beatrix",
+      "kagura"
+    ],
+    "weakAgainst": [
+      "khufra",
+      "chou",
+      "atlas"
+    ],
+    "image": "/heroes/hayabusa.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "gusion",
+    "name": "Gusion",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle",
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "A",
+    "winRate": 50.6,
+    "pickRate": 8.7,
+    "banRate": 8.2,
+    "counters": [
+      "lesley",
+      "beatrix",
+      "kagura"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra",
+      "karina"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "beatrix",
+      "kagura"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra",
+      "karina"
+    ],
+    "image": "/heroes/gusion.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "karina",
+    "name": "Karina",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Reap",
+      "Charge"
+    ],
+    "tier": "B",
+    "winRate": 48.9,
+    "pickRate": 6.2,
+    "banRate": 2.8,
+    "counters": [
+      "lancelot",
+      "gusion",
+      "benedetta"
+    ],
+    "counteredBy": [
+      "chou",
+      "tigreal",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "lancelot",
+      "gusion",
+      "benedetta"
+    ],
+    "weakAgainst": [
+      "chou",
+      "tigreal",
+      "atlas"
+    ],
+    "image": "/heroes/karina.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "helcurt",
+    "name": "Helcurt",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Reap",
+      "Chase"
+    ],
+    "tier": "B",
+    "winRate": 48.7,
+    "pickRate": 5.1,
+    "banRate": 3.2,
+    "counters": [
+      "support",
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "support",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/helcurt.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "hanzo",
+    "name": "Hanzo",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Reap",
+      "Damage"
+    ],
+    "tier": "B",
+    "winRate": 49.1,
+    "pickRate": 4.3,
+    "banRate": 2.5,
+    "counters": [
+      "marksman",
+      "mage"
+    ],
+    "counteredBy": [
+      "chou",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "marksman",
+      "mage"
+    ],
+    "weakAgainst": [
+      "chou",
+      "atlas"
+    ],
+    "image": "/heroes/hanzo.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "natalia",
+    "name": "Natalia",
+    "role": [
+      "Assassin",
+      "Support"
+    ],
+    "lane": [
+      "Jungle",
+      "Roam"
+    ],
+    "specialty": [
+      "Reap",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 51.4,
+    "pickRate": 6.9,
+    "banRate": 8.7,
+    "counters": [
+      "marksman",
+      "support"
+    ],
+    "counteredBy": [
+      "chou",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "marksman",
+      "support"
+    ],
+    "weakAgainst": [
+      "chou",
+      "atlas"
+    ],
+    "image": "/heroes/natalia.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "yi_sun_shin",
+    "name": "Yi Sun-shin",
+    "role": [
+      "Assassin",
+      "Marksman"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Reap",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 49.3,
+    "pickRate": 4.7,
+    "banRate": 2.7,
+    "counters": [
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/yi_sun_shin.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "joy",
+    "name": "Joy",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle",
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 51.8,
+    "pickRate": 8.1,
+    "banRate": 10.2,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra",
+      "phoveus"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra",
+      "phoveus"
+    ],
+    "image": "/heroes/joy.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "nolan",
+    "name": "Nolan",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "S",
+    "winRate": 52.4,
+    "pickRate": 9.6,
+    "banRate": 17.3,
+    "counters": [
+      "mage",
+      "marksman",
+      "tank"
+    ],
+    "counteredBy": [
+      "chou",
+      "atlas",
+      "phoveus"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman",
+      "tank"
+    ],
+    "weakAgainst": [
+      "chou",
+      "atlas",
+      "phoveus"
+    ],
+    "image": "/heroes/nolan.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "julian",
+    "name": "Julian",
+    "role": [
+      "Fighter",
+      "Mage"
+    ],
+    "lane": [
+      "Exp",
+      "Mid",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "A",
+    "winRate": 51.3,
+    "pickRate": 7.5,
+    "banRate": 8.8,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/julian.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "zetian",
+    "name": "Zetian",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle",
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "A",
+    "winRate": 51.5,
+    "pickRate": 7.2,
+    "banRate": 9.1,
+    "counters": [
+      "mage",
+      "support"
+    ],
+    "counteredBy": [
+      "chou",
+      "phoveus"
+    ],
+    "strongAgainst": [
+      "mage",
+      "support"
+    ],
+    "weakAgainst": [
+      "chou",
+      "phoveus"
+    ],
+    "image": "/heroes/zetian.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "kalea",
+    "name": "Kalea",
+    "role": [
+      "Assassin",
+      "Tank"
+    ],
+    "lane": [
+      "Roam",
+      "Jungle"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Initiator"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 6.4,
+    "banRate": 7.2,
+    "counters": [
+      "marksman",
+      "mage"
+    ],
+    "counteredBy": [
+      "diggie",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "marksman",
+      "mage"
+    ],
+    "weakAgainst": [
+      "diggie",
+      "atlas"
+    ],
+    "image": "/heroes/kalea.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "saber",
+    "name": "Saber",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "B",
+    "winRate": 49,
+    "pickRate": 4.9,
+    "banRate": 2.4,
+    "counters": [
+      "ling",
+      "lancelot",
+      "harith"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "ling",
+      "lancelot",
+      "harith"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/saber.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "zilong",
+    "name": "Zilong",
+    "role": [
+      "Fighter",
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle",
+      "Exp"
+    ],
+    "specialty": [
+      "Chase",
+      "Damage"
+    ],
+    "tier": "B",
+    "winRate": 48.5,
+    "pickRate": 4.1,
+    "banRate": 1.9,
+    "counters": [
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/zilong.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "aamon",
+    "name": "Aamon",
+    "role": [
+      "Assassin"
+    ],
+    "lane": [
+      "Jungle",
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 6.7,
+    "banRate": 7.9,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "atlas",
+      "phoveus"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "atlas",
+      "phoveus"
+    ],
+    "image": "/heroes/aamon.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "harley",
+    "name": "Harley",
+    "role": [
+      "Assassin",
+      "Mage"
+    ],
+    "lane": [
+      "Mid",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "A",
+    "winRate": 51.6,
+    "pickRate": 6.8,
+    "banRate": 6.2,
+    "counters": [
+      "lesley",
+      "moskov",
+      "kagura"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra",
+      "atlas"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "moskov",
+      "kagura"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra",
+      "atlas"
+    ],
+    "image": "/heroes/harley.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "selena",
+    "name": "Selena",
+    "role": [
+      "Assassin",
+      "Mage"
+    ],
+    "lane": [
+      "Mid",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 51.2,
+    "pickRate": 7.3,
+    "banRate": 9.4,
+    "counters": [
+      "marksman",
+      "support"
+    ],
+    "counteredBy": [
+      "chou",
+      "phoveus"
+    ],
+    "strongAgainst": [
+      "marksman",
+      "support"
+    ],
+    "weakAgainst": [
+      "chou",
+      "phoveus"
+    ],
+    "image": "/heroes/selena.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "obsidia",
+    "name": "Obsidia",
+    "role": [
+      "Assassin",
+      "Fighter"
+    ],
+    "lane": [
+      "Jungle",
+      "Exp"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "A",
+    "winRate": 51.3,
+    "pickRate": 6.6,
+    "banRate": 7.5,
+    "counters": [
+      "mage",
+      "marksman"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "mage",
+      "marksman"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/obsidia.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "kagura",
+    "name": "Kagura",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Poke",
+      "Burst"
+    ],
+    "tier": "A",
+    "winRate": 51.2,
+    "pickRate": 8.4,
+    "banRate": 7.9,
+    "counters": [
+      "chou",
+      "tigreal",
+      "atlas"
+    ],
+    "counteredBy": [
+      "valentina",
+      "lancelot",
+      "beatrix"
+    ],
+    "strongAgainst": [
+      "chou",
+      "tigreal",
+      "atlas"
+    ],
+    "weakAgainst": [
+      "valentina",
+      "lancelot",
+      "beatrix"
+    ],
+    "image": "/heroes/kagura.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "valentina",
+    "name": "Valentina",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Poke",
+      "Burst"
+    ],
+    "tier": "S",
+    "winRate": 51.9,
+    "pickRate": 10.5,
+    "banRate": 20.3,
+    "counters": [
+      "yve",
+      "kagura",
+      "esmeralda"
+    ],
+    "counteredBy": [
+      "lancelot",
+      "ling",
+      "benedetta"
+    ],
+    "strongAgainst": [
+      "yve",
+      "kagura",
+      "esmeralda"
+    ],
+    "weakAgainst": [
+      "lancelot",
+      "ling",
+      "benedetta"
+    ],
+    "image": "/heroes/valentina.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "yve",
+    "name": "Yve",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Area Damage",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 50.4,
+    "pickRate": 7.6,
+    "banRate": 6.8,
+    "counters": [
+      "tigreal",
+      "atlas",
+      "khufra"
+    ],
+    "counteredBy": [
+      "valentina",
+      "lancelot",
+      "benedetta"
+    ],
+    "strongAgainst": [
+      "tigreal",
+      "atlas",
+      "khufra"
+    ],
+    "weakAgainst": [
+      "valentina",
+      "lancelot",
+      "benedetta"
+    ],
+    "image": "/heroes/yve.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "lunox",
+    "name": "Lunox",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "S",
+    "winRate": 52.4,
+    "pickRate": 9.7,
+    "banRate": 15.8,
+    "counters": [
+      "chou",
+      "tigreal",
+      "atlas"
+    ],
+    "counteredBy": [
+      "valentina",
+      "lancelot",
+      "benedetta"
+    ],
+    "strongAgainst": [
+      "chou",
+      "tigreal",
+      "atlas"
+    ],
+    "weakAgainst": [
+      "valentina",
+      "lancelot",
+      "benedetta"
+    ],
+    "image": "/heroes/lunox.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "esmeralda",
+    "name": "Esmeralda",
+    "role": [
+      "Tank",
+      "Mage"
+    ],
+    "lane": [
+      "Exp",
+      "Roam"
+    ],
+    "specialty": [
+      "Shield",
+      "Sustain"
+    ],
+    "tier": "A",
+    "winRate": 52.8,
+    "pickRate": 9.1,
+    "banRate": 10.4,
+    "counters": [
+      "tigreal",
+      "khufra",
+      "atlas"
+    ],
+    "counteredBy": [
+      "valentina",
+      "yve",
+      "diggie"
+    ],
+    "strongAgainst": [
+      "tigreal",
+      "khufra",
+      "atlas"
+    ],
+    "weakAgainst": [
+      "valentina",
+      "yve",
+      "diggie"
+    ],
+    "image": "/heroes/esmeralda.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "harith",
+    "name": "Harith",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Mobility"
+    ],
+    "tier": "A",
+    "winRate": 50.8,
+    "pickRate": 7.2,
+    "banRate": 8.9,
+    "counters": [
+      "tigreal",
+      "atlas",
+      "chou"
+    ],
+    "counteredBy": [
+      "valentina",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "tigreal",
+      "atlas",
+      "chou"
+    ],
+    "weakAgainst": [
+      "valentina",
+      "khufra"
+    ],
+    "image": "/heroes/harith.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "lylia",
+    "name": "Lylia",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 49.5,
+    "pickRate": 5.3,
+    "banRate": 3.7,
+    "counters": [
+      "tigreal",
+      "atlas"
+    ],
+    "counteredBy": [
+      "valentina",
+      "lancelot",
+      "benedetta"
+    ],
+    "strongAgainst": [
+      "tigreal",
+      "atlas"
+    ],
+    "weakAgainst": [
+      "valentina",
+      "lancelot",
+      "benedetta"
+    ],
+    "image": "/heroes/lylia.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "nana",
+    "name": "Nana",
+    "role": [
+      "Mage",
+      "Support"
+    ],
+    "lane": [
+      "Mid",
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Poke"
+    ],
+    "tier": "A",
+    "winRate": 51.1,
+    "pickRate": 6.5,
+    "banRate": 6,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "valentina"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "valentina"
+    ],
+    "image": "/heroes/nana.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "cyclops",
+    "name": "Cyclops",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 49.3,
+    "pickRate": 5,
+    "banRate": 2.9,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/cyclops.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "aurora",
+    "name": "Aurora",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Crowd Control"
+    ],
+    "tier": "B",
+    "winRate": 49,
+    "pickRate": 4.7,
+    "banRate": 2.3,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/aurora.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "gord",
+    "name": "Gord",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 48.7,
+    "pickRate": 4.4,
+    "banRate": 1.9,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/gord.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "odette",
+    "name": "Odette",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Area Damage"
+    ],
+    "tier": "B",
+    "winRate": 48.9,
+    "pickRate": 4.6,
+    "banRate": 2.1,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/odette.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "eudora",
+    "name": "Eudora",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 49.1,
+    "pickRate": 4.8,
+    "banRate": 2.4,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/eudora.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "zhask",
+    "name": "Zhask",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Summon"
+    ],
+    "tier": "B",
+    "winRate": 48.8,
+    "pickRate": 4.3,
+    "banRate": 2,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/zhask.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "kadita",
+    "name": "Kadita",
+    "role": [
+      "Mage",
+      "Assassin"
+    ],
+    "lane": [
+      "Mid",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Chase"
+    ],
+    "tier": "A",
+    "winRate": 50.5,
+    "pickRate": 5.8,
+    "banRate": 4.9,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "valentina",
+      "lancelot"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "valentina",
+      "lancelot"
+    ],
+    "image": "/heroes/kadita.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "change",
+    "name": "Chang'e",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 6.2,
+    "banRate": 5.8,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin",
+      "lancelot"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin",
+      "lancelot"
+    ],
+    "image": "/heroes/change.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "cecilion",
+    "name": "Cecilion",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "A",
+    "winRate": 51.5,
+    "pickRate": 6.9,
+    "banRate": 7.2,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/cecilion.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "vexana",
+    "name": "Vexana",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Summon"
+    ],
+    "tier": "B",
+    "winRate": 49.2,
+    "pickRate": 4.5,
+    "banRate": 2.6,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/vexana.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "alice",
+    "name": "Alice",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Sustain",
+      "Damage"
+    ],
+    "tier": "B",
+    "winRate": 48.9,
+    "pickRate": 4,
+    "banRate": 2,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/alice.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "pharsa",
+    "name": "Pharsa",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "A",
+    "winRate": 50.7,
+    "pickRate": 6,
+    "banRate": 5.5,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/pharsa.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "xavier",
+    "name": "Xavier",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "A",
+    "winRate": 51.3,
+    "pickRate": 7.1,
+    "banRate": 8,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin",
+      "lancelot"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin",
+      "lancelot"
+    ],
+    "image": "/heroes/xavier.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "novaria",
+    "name": "Novaria",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 6.4,
+    "banRate": 6.7,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/novaria.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "valir",
+    "name": "Valir",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid",
+      "Roam"
+    ],
+    "specialty": [
+      "Burst",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 50.9,
+    "pickRate": 6.3,
+    "banRate": 6.1,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/valir.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "faramis",
+    "name": "Faramis",
+    "role": [
+      "Mage",
+      "Support"
+    ],
+    "lane": [
+      "Mid",
+      "Roam"
+    ],
+    "specialty": [
+      "Burst",
+      "Guard"
+    ],
+    "tier": "B",
+    "winRate": 49.3,
+    "pickRate": 4.6,
+    "banRate": 2.7,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "lancelot"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "lancelot"
+    ],
+    "image": "/heroes/faramis.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "zhuxin",
+    "name": "Zhuxin",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 51.7,
+    "pickRate": 7.8,
+    "banRate": 10.1,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin",
+      "valentina"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin",
+      "valentina"
+    ],
+    "image": "/heroes/zhuxin.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "luo_yi",
+    "name": "Luo Yi",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Burst"
+    ],
+    "tier": "A",
+    "winRate": 51.4,
+    "pickRate": 6.6,
+    "banRate": 7.3,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/luo_yi.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "kimmy",
+    "name": "Kimmy",
+    "role": [
+      "Mage",
+      "Marksman"
+    ],
+    "lane": [
+      "Mid",
+      "Gold"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 49,
+    "pickRate": 4.8,
+    "banRate": 2.5,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/kimmy.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "vale",
+    "name": "Vale",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 50.6,
+    "pickRate": 5.9,
+    "banRate": 5,
+    "counters": [
+      "fighter",
+      "sun"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "sun"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/vale.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "natan",
+    "name": "Natan",
+    "role": [
+      "Marksman",
+      "Mage"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Burst"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 6.6,
+    "banRate": 6.3,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/natan.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "sora",
+    "name": "Sora",
+    "role": [
+      "Mage",
+      "Marksman"
+    ],
+    "lane": [
+      "Mid",
+      "Gold"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "A",
+    "winRate": 51.6,
+    "pickRate": 7.5,
+    "banRate": 9.3,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "assassin",
+      "valentina"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "assassin",
+      "valentina"
+    ],
+    "image": "/heroes/sora.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "marcel",
+    "name": "Marcel",
+    "role": [
+      "Mage"
+    ],
+    "lane": [
+      "Mid"
+    ],
+    "specialty": [
+      "Burst",
+      "Crowd Control"
+    ],
+    "tier": "A",
+    "winRate": 51.1,
+    "pickRate": 6.7,
+    "banRate": 7,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/marcel.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "lesley",
+    "name": "Lesley",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Reap",
+      "Damage"
+    ],
+    "tier": "A",
+    "winRate": 52.3,
+    "pickRate": 8.1,
+    "banRate": 4.2,
+    "counters": [
+      "moskov",
+      "miya"
+    ],
+    "counteredBy": [
+      "ling",
+      "lancelot",
+      "benedetta",
+      "gusion"
+    ],
+    "strongAgainst": [
+      "moskov",
+      "miya"
+    ],
+    "weakAgainst": [
+      "ling",
+      "lancelot",
+      "benedetta",
+      "gusion"
+    ],
+    "image": "/heroes/lesley.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "beatrix",
+    "name": "Beatrix",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Burst"
+    ],
+    "tier": "S",
+    "winRate": 53.1,
+    "pickRate": 11.6,
+    "banRate": 19.8,
+    "counters": [
+      "lesley",
+      "moskov",
+      "miya"
+    ],
+    "counteredBy": [
+      "ling",
+      "lancelot",
+      "benedetta"
+    ],
+    "strongAgainst": [
+      "lesley",
+      "moskov",
+      "miya"
+    ],
+    "weakAgainst": [
+      "ling",
+      "lancelot",
+      "benedetta"
+    ],
+    "image": "/heroes/beatrix.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "moskov",
+    "name": "Moskov",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 48.4,
+    "pickRate": 5.9,
+    "banRate": 2.1,
+    "counters": [
+      "lesley"
+    ],
+    "counteredBy": [
+      "ling",
+      "fanny",
+      "lancelot",
+      "benedetta",
+      "beatrix"
+    ],
+    "strongAgainst": [
+      "lesley"
+    ],
+    "weakAgainst": [
+      "ling",
+      "fanny",
+      "lancelot",
+      "benedetta",
+      "beatrix"
+    ],
+    "image": "/heroes/moskov.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "miya",
+    "name": "Miya",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Reap"
+    ],
+    "tier": "B",
+    "winRate": 48.7,
+    "pickRate": 5.6,
+    "banRate": 2,
+    "counters": [],
+    "counteredBy": [
+      "ling",
+      "fanny",
+      "lancelot"
+    ],
+    "strongAgainst": [],
+    "weakAgainst": [
+      "ling",
+      "fanny",
+      "lancelot"
+    ],
+    "image": "/heroes/miya.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "layla",
+    "name": "Layla",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Poke"
+    ],
+    "tier": "C",
+    "winRate": 47.8,
+    "pickRate": 4.2,
+    "banRate": 0.9,
+    "counters": [],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/layla.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "bruno",
+    "name": "Bruno",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Reap"
+    ],
+    "tier": "B",
+    "winRate": 49.4,
+    "pickRate": 5.7,
+    "banRate": 2.6,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/bruno.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "clint",
+    "name": "Clint",
+    "role": [
+      "Marksman",
+      "Fighter"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "A",
+    "winRate": 51,
+    "pickRate": 6.8,
+    "banRate": 5.9,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/clint.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "karrie",
+    "name": "Karrie",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Reap"
+    ],
+    "tier": "A",
+    "winRate": 51.7,
+    "pickRate": 7.4,
+    "banRate": 7.8,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/karrie.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "irithel",
+    "name": "Irithel",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Poke"
+    ],
+    "tier": "B",
+    "winRate": 49.2,
+    "pickRate": 4.9,
+    "banRate": 2.3,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/irithel.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "wanwan",
+    "name": "Wanwan",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Reap",
+      "Damage"
+    ],
+    "tier": "A",
+    "winRate": 51.5,
+    "pickRate": 7.6,
+    "banRate": 8.4,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/wanwan.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "granger",
+    "name": "Granger",
+    "role": [
+      "Marksman",
+      "Assassin"
+    ],
+    "lane": [
+      "Gold",
+      "Jungle"
+    ],
+    "specialty": [
+      "Burst",
+      "Reap"
+    ],
+    "tier": "A",
+    "winRate": 51.1,
+    "pickRate": 7,
+    "banRate": 6.5,
+    "counters": [
+      "fighter",
+      "mage"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "mage"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/granger.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "brody",
+    "name": "Brody",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Burst",
+      "Poke"
+    ],
+    "tier": "A",
+    "winRate": 50.8,
+    "pickRate": 6.5,
+    "banRate": 5.8,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/brody.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "popol_kupa",
+    "name": "Popol and Kupa",
+    "role": [
+      "Marksman",
+      "Support"
+    ],
+    "lane": [
+      "Gold",
+      "Roam"
+    ],
+    "specialty": [
+      "Poke",
+      "Crowd Control"
+    ],
+    "tier": "B",
+    "winRate": 49.6,
+    "pickRate": 5.2,
+    "banRate": 3.1,
+    "counters": [
+      "mage",
+      "support"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "mage",
+      "support"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/popol_kupa.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "melissa",
+    "name": "Melissa",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Guard"
+    ],
+    "tier": "A",
+    "winRate": 51.3,
+    "pickRate": 6.9,
+    "banRate": 6.7,
+    "counters": [
+      "assassin",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "assassin",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/melissa.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "ixia",
+    "name": "Ixia",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Poke"
+    ],
+    "tier": "A",
+    "winRate": 51.8,
+    "pickRate": 8.3,
+    "banRate": 10.5,
+    "counters": [
+      "fighter",
+      "tank"
+    ],
+    "counteredBy": [
+      "assassin"
+    ],
+    "strongAgainst": [
+      "fighter",
+      "tank"
+    ],
+    "weakAgainst": [
+      "assassin"
+    ],
+    "image": "/heroes/ixia.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "hanabi",
+    "name": "Hanabi",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Guard"
+    ],
+    "tier": "B",
+    "winRate": 49.8,
+    "pickRate": 5.5,
+    "banRate": 3.4,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/hanabi.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "role": [
+      "Marksman"
+    ],
+    "lane": [
+      "Gold"
+    ],
+    "specialty": [
+      "Damage",
+      "Mobility"
+    ],
+    "tier": "A",
+    "winRate": 51.6,
+    "pickRate": 7.8,
+    "banRate": 9,
+    "counters": [
+      "tank",
+      "fighter"
+    ],
+    "counteredBy": [
+      "chou",
+      "khufra"
+    ],
+    "strongAgainst": [
+      "tank",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "chou",
+      "khufra"
+    ],
+    "image": "/heroes/claude.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "rafaela",
+    "name": "Rafaela",
+    "role": [
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Heal",
+      "Guard"
+    ],
+    "tier": "B",
+    "winRate": 49.5,
+    "pickRate": 4.4,
+    "banRate": 2,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "lancelot",
+      "valentina"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "lancelot",
+      "valentina"
+    ],
+    "image": "/heroes/rafaela.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "angela",
+    "name": "Angela",
+    "role": [
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Guard",
+      "Heal"
+    ],
+    "tier": "A",
+    "winRate": 51.7,
+    "pickRate": 7.5,
+    "banRate": 9.2,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "lancelot",
+      "chou"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "lancelot",
+      "chou"
+    ],
+    "image": "/heroes/angela.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "diggie",
+    "name": "Diggie",
+    "role": [
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Guard"
+    ],
+    "tier": "A",
+    "winRate": 50.8,
+    "pickRate": 5.4,
+    "banRate": 7.3,
+    "counters": [
+      "atlas",
+      "tigreal",
+      "khufra",
+      "esmeralda"
+    ],
+    "counteredBy": [
+      "valentina",
+      "lancelot"
+    ],
+    "strongAgainst": [
+      "atlas",
+      "tigreal",
+      "khufra",
+      "esmeralda"
+    ],
+    "weakAgainst": [
+      "valentina",
+      "lancelot"
+    ],
+    "image": "/heroes/diggie.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "mathilda",
+    "name": "Mathilda",
+    "role": [
+      "Support",
+      "Assassin"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Mobility",
+      "Crowd Control"
+    ],
+    "tier": "S",
+    "winRate": 52.7,
+    "pickRate": 8.9,
+    "banRate": 16.2,
+    "counters": [
+      "khufra",
+      "tigreal",
+      "atlas"
+    ],
+    "counteredBy": [
+      "saber",
+      "karina",
+      "chou"
+    ],
+    "strongAgainst": [
+      "khufra",
+      "tigreal",
+      "atlas"
+    ],
+    "weakAgainst": [
+      "saber",
+      "karina",
+      "chou"
+    ],
+    "image": "/heroes/mathilda.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "estes",
+    "name": "Estes",
+    "role": [
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Heal",
+      "Guard"
+    ],
+    "tier": "S",
+    "winRate": 53.2,
+    "pickRate": 8.7,
+    "banRate": 13.4,
+    "counters": [
+      "assassin",
+      "fighter"
+    ],
+    "counteredBy": [
+      "lancelot",
+      "valentina"
+    ],
+    "strongAgainst": [
+      "assassin",
+      "fighter"
+    ],
+    "weakAgainst": [
+      "lancelot",
+      "valentina"
+    ],
+    "image": "/heroes/estes.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "floryn",
+    "name": "Floryn",
+    "role": [
+      "Support"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Heal",
+      "Guard"
+    ],
+    "tier": "A",
+    "winRate": 51.5,
+    "pickRate": 6.8,
+    "banRate": 6.4,
+    "counters": [
+      "assassin"
+    ],
+    "counteredBy": [
+      "valentina",
+      "lancelot"
+    ],
+    "strongAgainst": [
+      "assassin"
+    ],
+    "weakAgainst": [
+      "valentina",
+      "lancelot"
+    ],
+    "image": "/heroes/floryn.webp",
+    "patch": "2026-06-10"
+  },
+  {
+    "id": "carmilla",
+    "name": "Carmilla",
+    "role": [
+      "Support",
+      "Tank"
+    ],
+    "lane": [
+      "Roam"
+    ],
+    "specialty": [
+      "Crowd Control",
+      "Guard"
+    ],
+    "tier": "A",
+    "winRate": 50.9,
+    "pickRate": 5.6,
+    "banRate": 4.8,
+    "counters": [
+      "marksman",
+      "mage"
+    ],
+    "counteredBy": [
+      "diggie",
+      "esmeralda"
+    ],
+    "strongAgainst": [
+      "marksman",
+      "mage"
+    ],
+    "weakAgainst": [
+      "diggie",
+      "esmeralda"
+    ],
+    "image": "/heroes/carmilla.webp",
+    "patch": "2026-06-10"
+  }
+]

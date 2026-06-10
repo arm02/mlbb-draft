@@ -1,0 +1,37 @@
+{
+  "name": "mlbb-draft",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "npx tsx scripts/seed-heroes.ts",
+    "generate": "npx tsx scripts/generate-heroes.ts"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.400.0",
+    "next": "^16.2.9",
+    "react": "^18",
+    "react-dom": "^18",
+    "swr": "^2.2.5",
+    "tailwind-merge": "^2.4.0",
+    "zustand": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "node-fetch": "^3.3.2",
+    "postcss": "^8",
+    "sharp": "^0.33.4",
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}
