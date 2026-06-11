@@ -1,53 +1,40 @@
 export type DraftTeam = "blue" | "red";
 export type DraftActionType = "ban" | "pick";
+export type DraftMode = "ban" | "pick";
 
 export interface DraftAction {
   type: DraftActionType;
   team: DraftTeam;
-  phase: 1 | 2 | 3; // 1 = ban p1, 2 = ban p2, 3 = pick
+  phase: 1 | 2 | 3;
 }
 
-// MLBB 5v5 draft order (simultaneous bans — each team bans together):
-//
-// Ban Phase 1  — Blue bans 3, then Red bans 3
-// Ban Phase 2  — Blue bans 2, then Red bans 2
-// Pick Phase   — snake: B, RR, BB, RR, BB, R
-//
 export const DRAFT_ORDER: DraftAction[] = [
-  // ── Ban Phase 1: Blue bans 3 ──────────────────────────────────
-  { type: "ban",  team: "blue", phase: 1 },
-  { type: "ban",  team: "blue", phase: 1 },
-  { type: "ban",  team: "blue", phase: 1 },
-  // ── Ban Phase 1: Red bans 3 ───────────────────────────────────
-  { type: "ban",  team: "red",  phase: 1 },
-  { type: "ban",  team: "red",  phase: 1 },
-  { type: "ban",  team: "red",  phase: 1 },
-  // ── Ban Phase 2: Blue bans 2 ──────────────────────────────────
-  { type: "ban",  team: "blue", phase: 2 },
-  { type: "ban",  team: "blue", phase: 2 },
-  // ── Ban Phase 2: Red bans 2 ───────────────────────────────────
-  { type: "ban",  team: "red",  phase: 2 },
-  { type: "ban",  team: "red",  phase: 2 },
-  // ── Pick Phase: snake B, RR, BB, RR, BB, R ────────────────────
+  { type: "ban", team: "blue", phase: 1 },
+  { type: "ban", team: "blue", phase: 1 },
+  { type: "ban", team: "blue", phase: 1 },
+  { type: "ban", team: "red", phase: 1 },
+  { type: "ban", team: "red", phase: 1 },
+  { type: "ban", team: "red", phase: 1 },
+  { type: "ban", team: "blue", phase: 2 },
+  { type: "ban", team: "blue", phase: 2 },
+  { type: "ban", team: "red", phase: 2 },
+  { type: "ban", team: "red", phase: 2 },
   { type: "pick", team: "blue", phase: 3 },
-  { type: "pick", team: "red",  phase: 3 },
-  { type: "pick", team: "red",  phase: 3 },
+  { type: "pick", team: "red", phase: 3 },
+  { type: "pick", team: "red", phase: 3 },
   { type: "pick", team: "blue", phase: 3 },
   { type: "pick", team: "blue", phase: 3 },
-  { type: "pick", team: "red",  phase: 3 },
-  { type: "pick", team: "red",  phase: 3 },
+  { type: "pick", team: "red", phase: 3 },
+  { type: "pick", team: "red", phase: 3 },
   { type: "pick", team: "blue", phase: 3 },
   { type: "pick", team: "blue", phase: 3 },
-  { type: "pick", team: "red",  phase: 3 },
+  { type: "pick", team: "red", phase: 3 },
 ];
 
-export const TOTAL_STEPS = DRAFT_ORDER.length; // 20
-
+export const TOTAL_STEPS = DRAFT_ORDER.length;
 export const FIRST_PICK_STEP_INDEX = DRAFT_ORDER.findIndex((a) => a.type === "pick");
-
-export function isBanStep(step: number): boolean {
-  return step >= 0 && step < FIRST_PICK_STEP_INDEX;
-}
+export const BAN_SLOT_COUNT = FIRST_PICK_STEP_INDEX;
+export const PICK_SLOT_COUNT = TOTAL_STEPS - FIRST_PICK_STEP_INDEX;
 
 export interface DraftSlot {
   step: number;
@@ -67,17 +54,88 @@ export function getTeamPicks(slots: DraftSlot[], team: DraftTeam): DraftSlot[] {
   return slots.filter((s) => s.action.team === team && s.action.type === "pick");
 }
 
-export function getUsedHeroIds(slots: DraftSlot[]): Set<string> {
-  const used = new Set<string>();
-  slots.forEach((s) => { if (s.heroId) used.add(s.heroId); });
-  return used;
+export function getPickedHeroIds(slots: DraftSlot[]): Set<string> {
+  const ids = new Set<string>();
+  slots.forEach((s) => {
+    if (s.action.type === "pick" && s.heroId) ids.add(s.heroId);
+  });
+  return ids;
 }
 
-export function getPhaseName(step: number): string {
-  if (step < 3)  return "Ban Phase 1 — Blue (optional)";
-  if (step < 6)  return "Ban Phase 1 — Red (optional)";
-  if (step < 8)  return "Ban Phase 2 — Blue (optional)";
-  if (step < 10) return "Ban Phase 2 — Red (optional)";
-  if (step < 20) return "Pick Phase";
-  return "Draft Complete";
+export function getBannedHeroIds(slots: DraftSlot[]): Set<string> {
+  const ids = new Set<string>();
+  slots.forEach((s) => {
+    if (s.action.type === "ban" && s.heroId) ids.add(s.heroId);
+  });
+  return ids;
+}
+
+/** Heroes unavailable for picks (any ban or pick elsewhere). */
+export function getUnavailableForPick(slots: DraftSlot[]): Set<string> {
+  const ids = new Set<string>();
+  slots.forEach((s) => {
+    if (s.heroId) ids.add(s.heroId);
+  });
+  return ids;
+}
+
+/** Same-team ban slots may duplicate heroes; only picks block new bans. */
+export function isHeroDisabledForSlot(
+  heroId: string,
+  targetSlot: DraftSlot,
+  slots: DraftSlot[]
+): boolean {
+  if (targetSlot.action.type === "ban") {
+    return slots.some(
+      (s) => s.step !== targetSlot.step && s.action.type === "pick" && s.heroId === heroId
+    );
+  }
+  return slots.some((s) => s.step !== targetSlot.step && s.heroId === heroId);
+}
+
+export function isPickPhaseComplete(slots: DraftSlot[]): boolean {
+  return slots
+    .filter((s) => s.action.type === "pick")
+    .every((s) => s.heroId !== null);
+}
+
+export function canSelectSlot(step: number, mode: DraftMode): boolean {
+  const action = DRAFT_ORDER[step];
+  if (!action) return false;
+  if (mode === "ban") return action.type === "ban";
+  return action.type === "pick";
+}
+
+export function findFirstEmptyBanStep(slots: DraftSlot[]): number | null {
+  for (let step = 0; step < FIRST_PICK_STEP_INDEX; step++) {
+    if (!slots[step]?.heroId) return step;
+  }
+  return null;
+}
+
+export function findNextEmptyBanStep(
+  slots: DraftSlot[],
+  afterStep: number
+): number | null {
+  for (let step = afterStep + 1; step < FIRST_PICK_STEP_INDEX; step++) {
+    if (!slots[step]?.heroId) return step;
+  }
+  return null;
+}
+
+export function findFirstEmptyPickStep(slots: DraftSlot[]): number | null {
+  for (let step = FIRST_PICK_STEP_INDEX; step < TOTAL_STEPS; step++) {
+    if (!slots[step]?.heroId) return step;
+  }
+  return null;
+}
+
+export function findNextEmptyPickStep(
+  slots: DraftSlot[],
+  afterStep: number
+): number | null {
+  for (let step = afterStep + 1; step < TOTAL_STEPS; step++) {
+    if (!slots[step]?.heroId) return step;
+  }
+  return null;
 }

@@ -2,10 +2,14 @@ import { create } from "zustand";
 import type { TabId } from "@/lib/types";
 import {
   buildEmptySlots,
-  FIRST_PICK_STEP_INDEX,
-  TOTAL_STEPS,
-  isBanStep,
+  findFirstEmptyBanStep,
+  findFirstEmptyPickStep,
+  findNextEmptyBanStep,
+  findNextEmptyPickStep,
+  isHeroDisabledForSlot,
+  type DraftMode,
   type DraftSlot,
+  type DraftTeam,
 } from "@/lib/draft";
 import { DEFAULT_MODE, DEFAULT_RANK, type RankFilter, type StatsMode } from "@/lib/ranks";
 
@@ -18,12 +22,10 @@ interface DraftStore {
   setStatsMode: (mode: StatsMode) => void;
   setStatsRank: (rank: RankFilter) => void;
 
-  // Counter tab
   enemyPicks: string[];
   addEnemyPick: (id: string) => void;
   removeEnemyPick: (id: string) => void;
 
-  // WinRate tab
   myTeam: string[];
   enemyTeam: string[];
   addToMyTeam: (id: string) => void;
@@ -31,23 +33,33 @@ interface DraftStore {
   addToEnemyTeam: (id: string) => void;
   removeFromEnemyTeam: (id: string) => void;
 
-  // Compare tab
   compareA: string | null;
   compareB: string | null;
   setCompareA: (id: string | null) => void;
   setCompareB: (id: string | null) => void;
 
-  // Draft Sim tab
   simSlots: DraftSlot[];
-  simStep: number;
-  simPickHero: (heroId: string) => void;
+  simDraftMode: DraftMode;
+  simSelectedStep: number | null;
+  simFirstPickTeam: DraftTeam;
+  simSelectSlot: (stepIndex: number) => void;
+  simAssignHero: (heroId: string) => void;
   simClearSlot: (stepIndex: number) => void;
-  simSkipBan: () => void;
-  simSkipToPicks: () => void;
-  simUndo: () => void;
+  simSetDraftMode: (mode: DraftMode) => void;
+  simSetFirstPickTeam: (team: DraftTeam) => void;
   simReset: () => void;
 
   clearAll: () => void;
+}
+
+function createInitialSimState() {
+  const slots = buildEmptySlots();
+  return {
+    simSlots: slots,
+    simDraftMode: "ban" as DraftMode,
+    simSelectedStep: findFirstEmptyBanStep(slots),
+    simFirstPickTeam: "blue" as DraftTeam,
+  };
 }
 
 export const useDraftStore = create<DraftStore>((set) => ({
@@ -90,47 +102,63 @@ export const useDraftStore = create<DraftStore>((set) => ({
   setCompareA: (id) => set({ compareA: id }),
   setCompareB: (id) => set({ compareB: id }),
 
-  // Draft Sim
-  simSlots: buildEmptySlots(),
-  simStep: 0,
-  simPickHero: (heroId) =>
+  ...createInitialSimState(),
+
+  simSelectSlot: (stepIndex) =>
     set((state) => {
-      if (state.simStep >= TOTAL_STEPS) return state;
+      const slot = state.simSlots[stepIndex];
+      if (!slot || slot.heroId) return state;
+      if (slot.action.type !== state.simDraftMode) return state;
+      return { simSelectedStep: stepIndex };
+    }),
+
+  simAssignHero: (heroId) =>
+    set((state) => {
+      const stepIndex = state.simSelectedStep;
+      if (stepIndex === null) return state;
+
+      const slot = state.simSlots[stepIndex];
+      if (!slot || slot.heroId) return state;
+      if (slot.action.type !== state.simDraftMode) return state;
+      if (isHeroDisabledForSlot(heroId, slot, state.simSlots)) return state;
+
       const slots = state.simSlots.map((s, i) =>
-        i === state.simStep ? { ...s, heroId } : s
+        i === stepIndex ? { ...s, heroId } : s
       );
-      return { simSlots: slots, simStep: state.simStep + 1 };
+
+      const nextSelected =
+        state.simDraftMode === "ban"
+          ? findNextEmptyBanStep(slots, stepIndex)
+          : findNextEmptyPickStep(slots, stepIndex);
+
+      return { simSlots: slots, simSelectedStep: nextSelected };
     }),
-  simSkipBan: () =>
-    set((state) => {
-      if (!isBanStep(state.simStep) || state.simStep >= TOTAL_STEPS) return state;
-      return { simStep: state.simStep + 1 };
-    }),
-  simSkipToPicks: () =>
-    set((state) => {
-      if (state.simStep >= FIRST_PICK_STEP_INDEX) return state;
-      return { simStep: FIRST_PICK_STEP_INDEX };
-    }),
+
   simClearSlot: (stepIndex) =>
     set((state) => {
       const slot = state.simSlots[stepIndex];
       if (!slot?.heroId) return state;
       const slots = state.simSlots.map((s, i) =>
-        i >= stepIndex ? { ...s, heroId: null } : s
+        i === stepIndex ? { ...s, heroId: null } : s
       );
-      return { simSlots: slots, simStep: stepIndex };
+      return {
+        simSlots: slots,
+        simSelectedStep: stepIndex,
+      };
     }),
-  simUndo: () =>
-    set((state) => {
-      if (state.simStep <= 0) return state;
-      const newStep = state.simStep - 1;
-      const slots = state.simSlots.map((s, i) =>
-        i === newStep ? { ...s, heroId: null } : s
-      );
-      return { simSlots: slots, simStep: newStep };
-    }),
-  simReset: () =>
-    set({ simSlots: buildEmptySlots(), simStep: 0 }),
+
+  simSetDraftMode: (mode) =>
+    set((state) => ({
+      simDraftMode: mode,
+      simSelectedStep:
+        mode === "ban"
+          ? findFirstEmptyBanStep(state.simSlots)
+          : findFirstEmptyPickStep(state.simSlots),
+    })),
+
+  simSetFirstPickTeam: (team) => set({ simFirstPickTeam: team }),
+
+  simReset: () => set(createInitialSimState()),
 
   clearAll: () =>
     set({
@@ -139,7 +167,6 @@ export const useDraftStore = create<DraftStore>((set) => ({
       enemyTeam: [],
       compareA: null,
       compareB: null,
-      simSlots: buildEmptySlots(),
-      simStep: 0,
+      ...createInitialSimState(),
     }),
 }));
